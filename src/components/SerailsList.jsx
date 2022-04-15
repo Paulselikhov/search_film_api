@@ -10,9 +10,9 @@ const SerailsList = () => {
     const dispatch = useDispatch()
 
     
-    useEffect( () => {
+  /*   useEffect( () => {
         dispatch(fetchSerials())
-    }, [])
+    }, []) */
 
 
     if (showSerials.loading){
