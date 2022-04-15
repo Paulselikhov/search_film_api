@@ -15,11 +15,11 @@ export const fetchSerials = () => {
     return async(dispatch) => {
         try {
             dispatch({type: FETCH_SERIALS})
-            const response = await axios.get('https://imdb-api.com/en/API/Title/k_mj2b6dz1/tt10048342')
+            const response = await axios.get('https://imdb-api.com/en/API/SearchSeries/k_nlew0aq1/stranger%20thin')
             console.log(response.data.errorMessage)
             console.log(response)
-            if (response.data.errorMessage == null) {
-                dispatch({type: FETCH_SERIALS_SUCCESS, payload: response.data.title})
+            if (response.data.errorMessage == null || response.data.errorMessage == "" ) {
+                dispatch({type: FETCH_SERIALS_SUCCESS, payload: response.data.results[0].title})
 
             } else {
                 dispatch({type: FETCH_SERIALS_ERROR, payload: `Произошла ошибка на стороне сервера: ${response.data.errorMessage}  `})

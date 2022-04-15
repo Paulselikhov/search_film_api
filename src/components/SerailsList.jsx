@@ -7,12 +7,16 @@ import { fetchSerials } from '../store/action-creators/fetchSerials';
 
 const SerailsList = () => {
     const showSerials = useSelector ( state => state.searchReducer)
-    const dispatch = useDispatch()
+    
 
     
-  /*   useEffect( () => {
-        dispatch(fetchSerials())
-    }, []) */
+  /*   
+    const dispatch = useDispatch()
+    useEffect( () => {
+            dispatch(fetchSerials())
+        }, []) 
+    
+    */
 
 
     if (showSerials.loading){
