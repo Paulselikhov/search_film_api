@@ -15,7 +15,6 @@ function App() {
 
   const showInput = useSelector( state => state.inputReducer)
 
-  const [inputValue, setInputValue] = useState('default')
   const dispatch = useDispatch()
 
   function getDispatch(){
@@ -26,7 +25,7 @@ function App() {
       <SerailsList/>
       <div> inputValue: {showInput.inputValue}</div>
       <div style = { {display: 'flex'}}>
-        <SearchInput/>
+        <SearchInput onChange = { (e) => dispatch({type: "SET_INPUT", payload: e.target.value })}/>
         <SearchButton onClick={getDispatch}/>
       </div>
       
