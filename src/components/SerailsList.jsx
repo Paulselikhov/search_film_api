@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchSerials } from '../store/action-creators/fetchSerials';
+import Post from './UI/Post';
 
 
 const SerailsList = () => {
@@ -28,9 +29,8 @@ const SerailsList = () => {
     }    
     return (
         <div>
-           {showSerials.serials[0].id}
             {showSerials.serials.map( item => 
-                <div> {item.id}</div>
+                <Post title={item.title} />
             )}
             
         </div>
