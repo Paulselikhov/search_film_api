@@ -2,7 +2,7 @@
 const SET_INPUT = "SET_INPUT"
 
 const defaultState = {
-    inputValue: 'Default value',
+    inputValue: "",
 }
 
 export const inputReducer = (state = defaultState, action) => {

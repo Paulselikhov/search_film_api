@@ -9,6 +9,7 @@ const SerailsList = () => {
     const showSerials = useSelector ( state => state.searchReducer)
     
 
+    const array = ['i1324153', '1324124321', '1325235234']
     
   /*   
     const dispatch = useDispatch()
@@ -27,7 +28,11 @@ const SerailsList = () => {
     }    
     return (
         <div>
-            <h1>{showSerials.serials}</h1>
+           {showSerials.serials[0].id}
+            {showSerials.serials.map( item => 
+                <div> {item.id}</div>
+            )}
+            
         </div>
     )
 }

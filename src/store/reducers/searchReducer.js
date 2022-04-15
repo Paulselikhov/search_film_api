@@ -5,7 +5,7 @@ export const FETCH_SERIALS_SUCCESS = "FETCH_SERIALS_SUCCESS";
 export const FETCH_SERIALS_ERROR = "FETCH_SERIALS_ERROR";
 
 const defaultState = {
-    serials: 'were is title?',
+    serials: ['were is serials?', 'this'],
     loading: false,
     error: null,
 }

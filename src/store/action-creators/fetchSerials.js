@@ -1,6 +1,6 @@
 import axios from "axios";
 import { FETCH_SERIALS, FETCH_SERIALS_ERROR, FETCH_SERIALS_SUCCESS } from "../reducers/searchReducer";
-import { inputReducer } from './../reducers/inputReducer';
+
 
 /* 
 keys:
@@ -25,7 +25,7 @@ export const fetchSerials = (inputValue) => {
             console.log(link)
             console.log(response)
             if (response.data.errorMessage == null || response.data.errorMessage == "" ) {
-                dispatch({type: FETCH_SERIALS_SUCCESS, payload: response.data.results[0].title})
+                dispatch({type: FETCH_SERIALS_SUCCESS, payload: response.data.results})
 
             } else {
                 dispatch({type: FETCH_SERIALS_ERROR, payload: `Произошла ошибка на стороне сервера: ${response.data.errorMessage}  `})

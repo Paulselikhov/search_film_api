@@ -21,12 +21,12 @@ function App() {
   }
   return (
     <div className="App">
-      <SerailsList/>
-      <div> inputValue: {showInput.inputValue}</div>
+      
       <div style = { {display: 'flex'}}>
         <SearchInput onChange = { (e) => dispatch({type: "SET_INPUT", payload: e.target.value })}/>
         <SearchButton onClick={getDispatch}/>
       </div>
+        <SerailsList/>
       
     </div>
   );
