@@ -1,6 +1,14 @@
 import axios from "axios";
 import { FETCH_SERIALS, FETCH_SERIALS_ERROR, FETCH_SERIALS_SUCCESS } from "../reducers/searchReducer";
 
+/* 
+keys:
+Paulselikhov = k_mj2b6dz1
+Paulselikhov2 = k_ksqaiwvn
+vika = k_nlew0aq1
+
+*/
+
 
 export const fetchSerials = () => {
     console.log('dispatching...')
@@ -8,14 +16,17 @@ export const fetchSerials = () => {
         try {
             dispatch({type: FETCH_SERIALS})
             const response = await axios.get('https://imdb-api.com/en/API/Title/k_mj2b6dz1/tt10048342')
-            console.log(response.status)
-            if (response.status == 200) {
-                dispatch({type: FETCH_SERIALS_ERROR, payload: 'Произошла ошибка при загрузке сервера'})
+            console.log(response.data.errorMessage)
+            console.log(response)
+            if (response.data.errorMessage == null) {
+                dispatch({type: FETCH_SERIALS_SUCCESS, payload: response.data.title})
+
             } else {
-            dispatch({type: FETCH_SERIALS_SUCCESS, payload: response.data.title})
+                dispatch({type: FETCH_SERIALS_ERROR, payload: `Произошла ошибка на стороне сервера: ${response.data.errorMessage}  `})
             }
+            
         } catch (e){
-            dispatch({type: FETCH_SERIALS_ERROR, payload: 'Произошла ошибка при загрузке сериалов'})
+            dispatch({type: FETCH_SERIALS_ERROR, payload: `${e} `})
         }
     }
 }
