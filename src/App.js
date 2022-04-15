@@ -1,11 +1,21 @@
+import SerailsList from "./components/SerailsList";
 import SearchButton from "./components/UI/SearchButton";
+import { fetchSerials } from './store/action-creators/fetchSerials';
+import { useDispatch } from 'react-redux';
+
 
 
 function App() {
+
+  const dispatch = useDispatch()
+
+  function getDispatch(){
+    dispatch(fetchSerials())
+  }
   return (
     <div className="App">
-      <div>Сюда будем выводить название фильма</div>
-      <SearchButton/>
+      <SerailsList/>
+      <SearchButton onClick = {getDispatch}/>
     </div>
   );
 }

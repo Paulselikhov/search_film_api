@@ -1,11 +1,11 @@
 import React from 'react';
 import classes from './SearchButton.module.css'
 
-const SearchButton = () => {
+const SearchButton = ({...props}) => {
   return (
     <div className = {classes.searchBtn}>
         <input type = 'text'></input>
-        <button>Search</button>
+        <button {...props}>Search</button>
     </div>
   )
 }

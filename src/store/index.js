@@ -1,6 +1,12 @@
-import { createStore } from "redux";
+import { createStore, applyMiddleware, combineReducers } from "redux";
 import thunk from "redux-thunk";
-import { rootReducer } from './reducers/index';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import { searchReducer } from "./reducers/searchReducer";
 
 
-export const store = createStore(rootReducer, applyMiddleware(thunk) )
+
+
+const rootReducer = combineReducers({
+    searchReducer: searchReducer,
+})
+export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)) );

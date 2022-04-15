@@ -1,22 +1,23 @@
 
-const FATCH_SERIALS = "FATCH_SERIALS";
-const FATCH_SERIALS_SUCCESS = "FATCH_SERIALS_SUCCESS";
-const FATCH_SERIALS_ERROR = "FATCH_SERIALS_ERROR";
+
+export const FETCH_SERIALS = "FETCH_SERIALS";
+export const FETCH_SERIALS_SUCCESS = "FETCH_SERIALS_SUCCESS";
+export const FETCH_SERIALS_ERROR = "FETCH_SERIALS_ERROR";
 
 const defaultState = {
-    serials: [],
-    loading: '123',
+    serials: 'were is title?',
+    loading: false,
     error: null,
 }
 
-export const searchReducer = (state, action) => {
+export const searchReducer = (state = defaultState, action) => {
     switch(action.type){
-        case FATCH_SERIALS:
-            return {loading: true, error: null, serials: []}
-        case FATCH_SERIALS_SUCCESS:
-            return {loading: false, error: null, serials: action.payload}
-        case FATCH_SERIALS_ERROR:
-            return {loading: false, error: action.payload, serials: []}
+        case FETCH_SERIALS:
+            return {...state, loading: true, error: null, serials: []}
+        case FETCH_SERIALS_SUCCESS:
+            return {...state, loading: false, error: null, serials: action.payload}
+        case FETCH_SERIALS_ERROR:
+            return {...state, loading: false, error: action.payload, serials: []}
         default:
             return state
     }
