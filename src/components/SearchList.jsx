@@ -3,8 +3,8 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchSerials } from '../store/action-creators/fetchSerials';
-import Post from './UI/Post';
-
+import Post from './UI/Post/Post';
+import classes from './SearchList.module.scss'
 
 const SerailsList = () => {
     const showSerials = useSelector ( state => state.searchReducer)
@@ -28,7 +28,7 @@ const SerailsList = () => {
         return <h1>{showSerials.error}</h1>
     }    
     return (
-        <div>
+        <div className={classes.list}>
             {showSerials.serials.map( item => 
                 <Post title={item.title} />
             )}

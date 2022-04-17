@@ -1,8 +1,10 @@
-import SerailsList from "./components/SerailsList";
+import SearchList from "./components/SearchList";
 import SearchButton from "./components/UI/SearchButton";
 import { fetchSerials } from './store/action-creators/fetchSerials';
 import { useDispatch, useSelector } from 'react-redux';
 import SearchInput from './components/UI/SearchInput';
+import "./styles/App.css";
+//import "./styles/nullstyle.css"
 
 
 
@@ -26,7 +28,7 @@ function App() {
         <SearchInput onChange = { (e) => dispatch({type: "SET_INPUT", payload: e.target.value })}/>
         <SearchButton onClick={getDispatch}/>
       </div>
-        <SerailsList/>
+        <SearchList/>
       
     </div>
   );
