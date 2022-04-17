@@ -9,9 +9,7 @@ import classes from './SearchList.module.scss'
 const SerailsList = () => {
     const showSerials = useSelector ( state => state.searchReducer)
     
-
-    const array = ['i1324153', '1324124321', '1325235234']
-    
+    console.dir(showSerials.serials)
   /*   
     const dispatch = useDispatch()
     useEffect( () => {
@@ -29,8 +27,9 @@ const SerailsList = () => {
     }    
     return (
         <div className={classes.list}>
+            
             {showSerials.serials.map( item => 
-                <Post title={item.title} />
+                <Post type={item.type} year={item.year} awards={item.awards} imDbRating={item.imDbRating} id={item.id} title={item.title} genres={item.genres} image={item.image} />
             )}
             
         </div>
