@@ -3,10 +3,11 @@
 
 
 .main{
+    max-width: 70%;
     background-color: rgba(58, 53, 53, 0.2);
     display: flex;
     border: 1px solid #000;
-    margin: 10px;
+    margin: 10px auto;
   }
 
 .image{

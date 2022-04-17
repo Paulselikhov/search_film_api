@@ -1,5 +1,5 @@
 .App{
     border: 1px solid #000;
-    background: url(/src/img/background.png) 0 0/100% auto no-repeat;
-    height: 800px;
+    background: url(/src/img/background.png) 0 0/100% auto;
+    height: 100%;
 }
