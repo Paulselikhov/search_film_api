@@ -5,18 +5,22 @@ import { useEffect } from 'react';
 import { fetchSerials } from '../store/action-creators/fetchSerials';
 import Post from './UI/Post/Post';
 import classes from './SearchList.module.scss'
+import { useNavigate } from 'react-router-dom';
+
 
 const SerailsList = () => {
     const showSerials = useSelector ( state => state.searchReducer)
+
+    const navigate = useNavigate();
+   
     
-    console.dir(showSerials.serials)
-  /*   
-    const dispatch = useDispatch()
-    useEffect( () => {
-            dispatch(fetchSerials())
-        }, []) 
+
+    function goToFilm(){
+        console.dir(showSerials.serials)
+        navigate('/film')
+    }
     
-    */
+  
 
 
     if (showSerials.loading){
@@ -29,7 +33,7 @@ const SerailsList = () => {
         <div className={classes.list}>
             
             {showSerials.serials.map( item => 
-                <Post type={item.type} year={item.year} awards={item.awards} imDbRating={item.imDbRating} id={item.id} title={item.title} genres={item.genres} image={item.image} />
+                <Post onClick = {goToFilm} type={item.type} year={item.year} awards={item.awards} imDbRating={item.imDbRating} id={item.id} title={item.title} genres={item.genres} image={item.image} />
             )}
             
         </div>

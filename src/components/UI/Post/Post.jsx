@@ -7,7 +7,7 @@ const Post = ({title, id, type, year, awards, imDbRating, genres, image, ...prop
 
   
   return (
-    <div className={classes.main}>
+    <div className={classes.main} {...props}>
         <div className={classes.image} style={{background: `url(${image})0 0/100% auto no-repeat`}} ></div> {/* Изображение */}
         <div className={classes.post}> {/* Пост и рейтинг */}
             <div>

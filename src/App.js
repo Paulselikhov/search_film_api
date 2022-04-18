@@ -14,8 +14,7 @@ import NotFound from './pages/NotFound';
 function App() {
 
   return (
-    <BrowserRouter>
-      
+    <BrowserRouter> 
       <Routes>
         <Route path="" element={<Main/>} />
         <Route path="/film" element={<Film/>} />
