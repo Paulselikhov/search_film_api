@@ -6,7 +6,7 @@ export const FETCH_SERIALS_ERROR = "FETCH_SERIALS_ERROR";
 
 const defaultState = {
     id: 'test',
-    serials: ['were is serials?', 'this'],
+    serials: [{title:'myFilm', year: '1997', type: 'Myserial', genres: 'Real', awards: 'Top for top the best !!!!', imDbRating: 9.9}],
     loading: false,
     error: null,
 }
