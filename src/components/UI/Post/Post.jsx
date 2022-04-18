@@ -5,7 +5,7 @@ import classes from './Post.module.scss';
 
 const Post = ({title, id, type, year, awards, imDbRating, genres, image, ...props}) => {
 
-  const raiting_default = 'Рейтинг';
+  
   return (
     <div className={classes.main}>
         <div className={classes.image} style={{background: `url(${image})0 0/100% auto no-repeat`}} ></div> {/* Изображение */}
