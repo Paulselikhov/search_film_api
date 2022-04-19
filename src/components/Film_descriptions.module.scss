@@ -1,19 +1,37 @@
+
+.film_descriptions{
+    
+}
 .title{
+    display: flex;
+    flex-direction: column;
     color: white;
+
+
+    border: 1px solid rgb(255, 0, 0);
 }
 
+.black{
+    
+    max-width: 800px;
+    background-image: linear-gradient(to left,rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.8), rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0));
+    
+}
 .main{
     max-width: 450px;
-    margin: px 0px 0px 50px;
-    
+    padding: 70px 0px 0px 100px;
+}
+
+.main_title{
     font-size: 72px;
+    margin-bottom: 20px;
 }
 
 .main_children{
 
     display: flex;
     font-size: 24px;
-    margin-top: 20px;
+    margin-bottom: 50%;
     
     span{
 
@@ -41,55 +59,63 @@
 
 
 
-.watch{
-    border: 1px solid #000000;
-    border-radius: 10px;
-    max-width: 100px;
-
-    margin: 50px 0px 0px 50px;
-
+.main_watch{
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    max-width: 120px;
+    margin-bottom: 30px;
     text-align: center;
-    padding: 5px;
+    padding: 10px 0px 10px 0px;
     a{
         color: white;
     }
 }
 
-.awards{
-    border: 1px solid #000;
-    max-width: 200px;
-    margin: 10px 0px 0px 50px;
-    padding: 10px;
+.main_awards{
+    max-width: 300px;
+    padding-bottom: 50px;
 }
 
 .description{
-
+    max-width: 800px;
+    padding: 60px 60px 0px 80px;
+    color: #323232;
     p{
-        border: 1px solid green;
         padding-bottom: 10px;
         &:first-child{
-            font-size: 30px;
+            font-size: 36px;
+            font-weight: 900;
+            line-height: 52px;
         }
+
+
     }
-    max-width: 500px;
-    padding: 20px;
-    border: 1px solid #000;
+    
+    
     
 }
 
-.similars{
-    border: 1px solid #000;
+.plot{
     margin-top: 20px;
 
-}
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
 
+}
+.similars_title{
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 52px;
+}
 .similars__list{
     display: flex;
     div{
+        border-radius: 20px;
         padding: 20px;
         margin: 10px;
-        width: 100px;
-        height: 140px;
+        width: 145px;
+        height: 200px;
     }
 }
 

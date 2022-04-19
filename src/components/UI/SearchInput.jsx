@@ -1,9 +1,12 @@
 import React from 'react';
-import classes from './SearchInput.module.css'
+import classes from './SearchInput.module.scss'
 
 const SearchInput = ({...props}) => {
   return (
-    <input className= {classes.searchInpt}  {...props} type = 'text'></input>
+    <div className= {classes.searchInpt}>
+      <input   {...props} type = 'text'></input>
+    </div>
+    
   )
 }
 

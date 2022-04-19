@@ -1,0 +1,19 @@
+.title{
+    margin-top: 100px;
+    div{
+        &:first-child{
+            font-size: 64px;
+            font-weight: 900;
+            line-height: 78.02px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        &:last-child{
+            font-size: 36px;
+            font-weight: 500;
+            line-height: 52px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+}

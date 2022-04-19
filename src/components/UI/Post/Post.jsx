@@ -8,18 +8,20 @@ const Post = ({title, id, type, year, awards, imDbRating, genres, image, ...prop
   
   return (
     <div className={classes.main} {...props}>
-        <div className={classes.image} style={{background: `url(${image})0 0/100% auto no-repeat`}} ></div> {/* Изображение */}
-        <div className={classes.post}> {/* Пост и рейтинг */}
-            <div>
-                <div className={classes.title}>{/* Заголовок */}
-                    {title}
-                    <div className={classes.description}>{type} | {genres} | {year}</div> {/* TVSeries | Drama | 2020 */}
-                    <div className={classes.title_rating}>{awards}</div> {/* Rating */}
-                </div> 
-            </div> {/* Пост */}
-                <div className={classes.rating}>{imDbRating}</div> {/* Рейтинг */} 
+        <div className={classes.main_image} style={{background: `url(${image})0 0/100% auto no-repeat`}} ></div> {/* Изображение */}
+        <div className={classes.main_post}>
+          <div className={classes.post}> {/* Пост и рейтинг */}
             
-        </div> 
+                <div className={classes.title}>{/* Заголовок */}
+                    <h1>{title}</h1>
+                    <div className={classes.description}>{type} | {genres} | {year}</div> {/* TVSeries | Drama | 2020 */}
+                </div> 
+            
+                <div className={classes.rating}>IMDb {imDbRating}</div> {/* Рейтинг */} 
+          </div> 
+          <div className={classes.awards}>{awards}</div> {/* Rating */}
+        </div>
+        
         
     </div>
   )
