@@ -21,18 +21,34 @@ const defaultState = {
             image: 'https://imdb-api.com/images/original/MV5BN2ZmYjg1YmItNWQ4OC00YWM0LWE0ZDktYThjOTZiZjhhN2Q2XkEyXkFqcGdeQXVyNjgxNTQ3Mjk@._V1_Ratio0.7273_AL_.jpg',
             plot: 'Nine year-old orphan Beth Harmon is quiet, sullen, and by all appearances unremarkable. That is, until she plays her first game of chess. Her senses grow sharper, her thinking clearer, and for the first time in her life she feels herself fully in control. By the age of sixteen, shes competing for the U.S. Open championship. But as Beth hones her skills on the professional circuit, the stakes get higher, her isolation grows more frightening, and the thought of escape becomes all the more tempting. Based on the book by Walter Tevis.',
             similars: [
-                {
+                {   
+                    title: 'Title not found',
+                    genres: 'Genre not found',
+                    plot: 'Not loaded',
+                    imDbRating: '0.0',
                     image: 'https://imdb-api.com/images/original/MV5BN2ZmYjg1YmItNWQ4OC00YWM0LWE0ZDktYThjOTZiZjhhN2Q2XkEyXkFqcGdeQXVyNjgxNTQ3Mjk@._V1_Ratio0.7273_AL_.jpg'    
                 },
                 
                 {
+                    title: 'Title not found',
+                    genres: 'Genre not found',
+                    plot: 'Not loaded',
+                    imDbRating: '0.0',
                     image: 'https://imdb-api.com/images/original/MV5BN2ZmYjg1YmItNWQ4OC00YWM0LWE0ZDktYThjOTZiZjhhN2Q2XkEyXkFqcGdeQXVyNjgxNTQ3Mjk@._V1_Ratio0.7273_AL_.jpg'
                 },
 
                 {
+                    title: 'Title not found',
+                    genres: 'Genre not found',
+                    plot: 'Not loaded',
+                    imDbRating: '0.0',
                     image: 'https://imdb-api.com/images/original/MV5BN2ZmYjg1YmItNWQ4OC00YWM0LWE0ZDktYThjOTZiZjhhN2Q2XkEyXkFqcGdeQXVyNjgxNTQ3Mjk@._V1_Ratio0.7273_AL_.jpg'
                 },
                 {
+                    title: 'Title not found',
+                    genres: 'Genre not found',
+                    plot: 'Not loaded',
+                    imDbRating: '0.0',
                     image: 'https://imdb-api.com/images/original/MV5BN2ZmYjg1YmItNWQ4OC00YWM0LWE0ZDktYThjOTZiZjhhN2Q2XkEyXkFqcGdeQXVyNjgxNTQ3Mjk@._V1_Ratio0.7273_AL_.jpg'
                 },
 

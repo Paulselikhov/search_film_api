@@ -13,15 +13,15 @@ const Film_descriptions = () => {
   return (
     <div className={classes.Film_descriptions}>
       
-      <div className={classes.title} style = { {background: `url(${showSerial.state.images[0].image}) 0 0/cover no-repeat`}}> {/* Тут будет изображение */}
+      <div className={classes.title} style = { {background: `url(${showSerial.state.images[0].image}) 0 0/100% auto no-repeat`}}> {/* Тут будет изображение */}
       <div className={classes.black}> {/* Тут будет тень  */}
         <div className={classes.main} > {/* Блок с описанием */}
           <div className={classes.main_title}>{showSerial.state.title}</div>
           <div className={classes.main_children}>
-            <span>{showSerial.state.imDbRating}</span>
-            <span>{showSerial.state.genres}</span>
-            <span>{showSerial.state.type}</span>
-            <span>{showSerial.state.year}</span>
+            <span>IMDb {showSerial.state.imDbRating}</span>
+            <span>{showSerial.state.genres}&nbsp;&nbsp;&nbsp;|</span>
+            <span>&nbsp;&nbsp;&nbsp;{showSerial.state.type}&nbsp;&nbsp;&nbsp;|</span>
+            <span>&nbsp;&nbsp;&nbsp;{showSerial.state.year}</span>
           </div>
           <div className={classes.main_watch}>
           <a target="_blank" href={showSerial.state.trailer}>Watch</a>
@@ -37,10 +37,74 @@ const Film_descriptions = () => {
       <div className={classes.plot}>
         <div className={classes.similars_title}>You may also like</div>
         <div className={classes.similars__list}>
-          <div style = { {background: `url(${showSerial.state.similars[0].image}) 0 0/100% auto no-repeat`}}></div>
-          <div style = { {background: `url(${showSerial.state.similars[1].image}) 0 0/100% auto no-repeat`}}></div>
-          <div style = { {background: `url(${showSerial.state.similars[2].image}) 0 0/100% auto no-repeat`}}></div>
-          <div style = { {background: `url(${showSerial.state.similars[3].image}) 0 0/100% auto no-repeat`}}></div>
+          <div style = { {background: `url(${showSerial.state.similars[0].image}) 0 0/cover no-repeat`}}>
+            <div>
+              <div>
+                {showSerial.state.similars[0].title}
+              </div>
+              <div>
+                 {showSerial.state.similars[0].genres}
+              </div>
+              <div>
+                  {showSerial.state.similars[0].plot}
+              </div>
+              <div>
+                IMDb {showSerial.state.similars[0].imDbRating}
+              </div>
+            </div>
+          </div>
+          <div style = { {background: `url(${showSerial.state.similars[1].image}) 0 0/cover no-repeat`}}>
+            <div>
+              <div>
+                {showSerial.state.similars[1].title}
+              </div>
+              <div>
+                 {showSerial.state.similars[1].genres}
+              </div>
+              <div>
+                  {showSerial.state.similars[1].plot}
+              </div>
+              <div>
+                IMDb {showSerial.state.similars[1].imDbRating}
+              </div>
+            </div>
+          </div>
+          <div style = { {background: `url(${showSerial.state.similars[2].image}) 0 0/cover no-repeat`}}>
+            <div>
+              <div>
+                {showSerial.state.similars[2].title}
+              </div>
+              <div>
+                 {showSerial.state.similars[2].genres}
+              </div>
+              <div>
+                  {showSerial.state.similars[2].plot}
+              </div>
+              <div>
+                IMDb {showSerial.state.similars[2].imDbRating}
+              </div>
+            </div>
+          </div>
+          <div style = { {background: `url(${showSerial.state.similars[3].image}) 0 0/cover no-repeat`}}>
+            <div>
+              <div>
+                {showSerial.state.similars[3].title}
+              </div>
+              <div>
+                 {showSerial.state.similars[3].genres}
+              </div>
+              <div>
+                  {showSerial.state.similars[3].plot}
+              </div>
+              <div>
+                IMDb {showSerial.state.similars[3].imDbRating}
+              </div>
+            </div>
+          </div>
+          
+              
+              
+            
         </div>
     </div>
     </div>

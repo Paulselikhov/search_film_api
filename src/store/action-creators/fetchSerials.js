@@ -18,7 +18,7 @@ export const fetchSerials = (inputValue) => {
 
 
     
-    let link = 'https://imdb-api.com/en/API/SearchSeries/k_a02x2oqh/'+inputValue;
+    let link = 'https://imdb-api.com/en/API/SearchSeries/k_x0zr25jc/'+inputValue;
 
 
     console.log('dispatching...')
@@ -31,11 +31,11 @@ export const fetchSerials = (inputValue) => {
                 
                 for (let i = 0; i <= response.data.results.length-1; i++ ){
                    
-                    const response_title = await axios.get(`https://imdb-api.com/en/API/Title/k_a02x2oqh/${response.data.results[i].id}`);
+                    const response_title = await axios.get(`https://imdb-api.com/en/API/Title/k_x0zr25jc/${response.data.results[i].id}`);
 
-                    const response_trailer = await axios.get(`https://imdb-api.com/en/API/Trailer/k_a02x2oqh/${response.data.results[i].id}`)
+                    const response_trailer = await axios.get(`https://imdb-api.com/en/API/Trailer/k_x0zr25jc/${response.data.results[i].id}`)
 
-                    const response_images = await axios.get(`https://imdb-api.com/en/API/Images/k_a02x2oqh/${response.data.results[i].id}`)
+                    const response_images = await axios.get(`https://imdb-api.com/en/API/Images/k_x0zr25jc/${response.data.results[i].id}`)
 
                     
                     response.data.results[i].key = i

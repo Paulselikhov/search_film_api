@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchSerials } from '../store/action-creators/fetchSerials';
 import Post from './UI/Post/Post';
-import classes from './SearchList.module.scss'
+//import classes from './SearchList.module.scss'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { FETCH_SERIALS_SUCCESS } from '../store/reducers/searchReducer';
@@ -26,7 +26,7 @@ const SerailsList = () => {
 
         
         
-        const response_similar1_title = await axios.get(`https://imdb-api.com/en/API/Title/k_a02x2oqh/${item.similars[0].id}`)
+        const response_similar1_title = await axios.get(`https://imdb-api.com/en/API/Title/k_x0zr25jc/${item.similars[0].id}`)
 
         item.similars[0].genres = response_similar1_title.data.genres
         item.similars[0].plot = response_similar1_title.data.plot 
@@ -48,7 +48,7 @@ const SerailsList = () => {
         return <h1>{showSerials.error}</h1>
     }    
     return (
-        <div className={classes.list}>
+        <div>
             
             {showSerials.serials.map( item => 
                 <Post onClick = { () => goToFilm(item)} type={item.type} year={item.year} awards={item.awards} imDbRating={item.imDbRating} id={item.id} title={item.title} genres={item.genres} image={item.image} />
