@@ -8,6 +8,10 @@ Paulselikhov = k_mj2b6dz1
 Paulselikhov2 = k_ksqaiwvn
 vika = k_nlew0aq1
 
+https://temprmail.com/ru/
+k_79q1qlso
+k_zb7c46si
+
 */
 
 
@@ -15,7 +19,7 @@ export const fetchSerials = (inputValue) => {
 
 
     
-    let link = 'https://imdb-api.com/en/API/SearchSeries/k_nlew0aq1/'+inputValue;
+    let link = 'https://imdb-api.com/en/API/SearchSeries/k_zb7c46si/'+inputValue;
 
 
     console.log('dispatching...')
@@ -28,12 +32,15 @@ export const fetchSerials = (inputValue) => {
                 
                 for (let i = 0; i <= response.data.results.length-1; i++ ){
                    
-                    const response_title = await axios.get(`https://imdb-api.com/en/API/Title/k_nlew0aq1/${response.data.results[i].id}`);
+                    const response_title = await axios.get(`https://imdb-api.com/en/API/Title/k_zb7c46si/${response.data.results[i].id}`);
 
-                    const response_trailer = await axios.get(`https://imdb-api.com/en/API/Trailer/k_nlew0aq1/${response.data.results[i].id}`)
+                    const response_trailer = await axios.get(`https://imdb-api.com/en/API/Trailer/k_zb7c46si/${response.data.results[i].id}`)
 
-                    const response_images = await axios.get(`https://imdb-api.com/en/API/Images/k_nlew0aq1/${response.data.results[i].id}`)
+                    const response_images = await axios.get(`https://imdb-api.com/en/API/Images/k_zb7c46si/${response.data.results[i].id}`)
 
+                    const response_similar1_title = await axios.get(`https://imdb-api.com/en/API/Title/k_zb7c46si/${response_title.data.similars[0].id}`)
+                    
+                    
                     response.data.results[i].type = response_title.data.type
                     response.data.results[i].year = response_title.data.year
                     response.data.results[i].awards = response_title.data.awards
@@ -44,6 +51,10 @@ export const fetchSerials = (inputValue) => {
                     response.data.results[i].image = response_title.data.image
                     response.data.results[i].trailer = response_trailer.data.link
                     response.data.results[i].images = response_images.data.items
+
+                    response.data.results[i].similars[0].genres = response_similar1_title.data.genres
+                    response.data.results[i].similars[0].plot = response_similar1_title.data.plot
+
                 }
                 dispatch({type: FETCH_SERIALS_SUCCESS, payload: response.data.results})
             } else {
