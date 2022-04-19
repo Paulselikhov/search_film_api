@@ -1,15 +1,12 @@
 import React from 'react';
 import classes from './Film_descriptions.module.scss';
-import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 
 const Film_descriptions = () => {
 
-
   const showSerial = useLocation();
     console.dir(showSerial.state)
  
-
   return (
     <div className={classes.Film_descriptions}>
       

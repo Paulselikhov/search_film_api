@@ -1,10 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { useEffect } from 'react';
-import { fetchSerials } from '../store/action-creators/fetchSerials';
 import Post from './UI/Post/Post';
-//import classes from './SearchList.module.scss'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { FETCH_SERIALS_SUCCESS } from '../store/reducers/searchReducer';
@@ -18,13 +15,7 @@ const SerailsList = () => {
 
     const navigate = useNavigate();
    
-
     async function goToFilm(item){
-        
-        
-
-
-        
         
         const response_similar1_title = await axios.get(`https://imdb-api.com/en/API/Title/k_x0zr25jc/${item.similars[0].id}`)
 
@@ -35,12 +26,7 @@ const SerailsList = () => {
 
         navigate('/film', {state: item})
         
-
     }
-    
-  
-
-
     if (showSerials.loading){
         return <h1>Идёт загрузка...</h1>
     }

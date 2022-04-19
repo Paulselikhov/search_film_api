@@ -1,7 +1,4 @@
 
-.film_descriptions{
-    
-}
 .title{
     display: flex;
     flex-direction: column;
@@ -9,13 +6,11 @@
 }
 
 .black{
-    
     max-width: 800px;
     background-image: linear-gradient(to left,rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.8), rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0));
-    
 }
 .main{
-    max-width: 650px;
+    max-width: 800px;
     padding: 70px 0px 0px 100px;
 }
 
@@ -32,7 +27,6 @@
     margin-bottom: 30%;
     span{
 
-        //padding: 10px;
         font-weight: 600;
         font-size: 24px;
         line-height: 29px;
@@ -42,7 +36,7 @@
             width: 87px;
             height: 30px;
 
-            padding: 7px 12px 8px;
+            padding: 7px 12px 7px;
             border-radius: 8px;
             background-color: yellow;
             color: black;
@@ -53,12 +47,7 @@
         }
     }
     
-
-    
 }
-
-
-
 
 
 .main_watch{
@@ -91,12 +80,7 @@
             font-weight: 900;
             line-height: 52px;
         }
-
-
     }
-    
-    
-    
 }
 
 .plot{
@@ -146,18 +130,21 @@
                     font-size: 10px;
                     line-height: 17px;
                     text-align: left;
-    
+                    
                     &:nth-child(1){
                         font-weight: 800;
                         font-size: 24px;
                         line-height: 29px;
-                        
                     }
                     &:nth-child(2){
                         padding-bottom: 5px;
                     }
                     &:nth-child(3){
-                        overflow:hidden;
+                        overflow: scroll;
+                        text-overflow: clip;
+                        &::-webkit-scrollbar{
+                            width: 0;
+                        }
                         margin-bottom: 12px;
                     }
                     &:nth-child(4){
