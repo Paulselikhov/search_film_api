@@ -4,7 +4,7 @@ import SearchInput from './../components/UI/SearchInput';
 import SearchButton from './../components/UI/SearchButton';
 import SearchList from './../components/SearchList';
 import { fetchSerials } from './../store/action-creators/fetchSerials';
-//import "./../styles/nullstyle.css";
+import "./../styles/nullstyle.css";
 import "./../styles/Main.css";
 
 
