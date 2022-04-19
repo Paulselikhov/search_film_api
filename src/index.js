@@ -8,7 +8,6 @@ import { store } from './store/index';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-console.dir(store)
 root.render( 
   <React.StrictMode>
     <Provider store={store}>

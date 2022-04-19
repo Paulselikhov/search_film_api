@@ -14,10 +14,10 @@ const SerailsList = () => {
     const navigate = useNavigate();
    
     
+    
 
-    function goToFilm(){
-        console.dir(showSerials.serials)
-        navigate('/film')
+    function goToFilm(item){
+        navigate('/film', {state: item})
     }
     
   
@@ -33,7 +33,7 @@ const SerailsList = () => {
         <div className={classes.list}>
             
             {showSerials.serials.map( item => 
-                <Post onClick = {goToFilm} type={item.type} year={item.year} awards={item.awards} imDbRating={item.imDbRating} id={item.id} title={item.title} genres={item.genres} image={item.image} />
+                <Post onClick = { () => goToFilm(item)} type={item.type} year={item.year} awards={item.awards} imDbRating={item.imDbRating} id={item.id} title={item.title} genres={item.genres} image={item.image} />
             )}
             
         </div>

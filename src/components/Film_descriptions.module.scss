@@ -1,8 +1,11 @@
+.title{
+    color: white;
+}
+
 .main{
-
     max-width: 450px;
-    margin: 50px 0px 0px 50px;
-
+    margin: px 0px 0px 50px;
+    
     font-size: 72px;
 }
 
@@ -18,13 +21,14 @@
         &:first-child{
             border-radius: 10px;
             background-color: yellow;
+            color: black;
         }
         &:nth-child(2){
-            border-right: 1px solid #000;
+            border-right: 1px solid white;
             
         }
         &:nth-child(3){
-            border-right: 1px solid #000;
+            border-right: 1px solid white;
             
         }
     }
@@ -46,11 +50,48 @@
 
     text-align: center;
     padding: 5px;
+    a{
+        color: white;
+    }
 }
 
 .awards{
     border: 1px solid #000;
     max-width: 200px;
-    margin: 50px 0px 0px 50px;
+    margin: 10px 0px 0px 50px;
     padding: 10px;
 }
+
+.description{
+
+    p{
+        border: 1px solid green;
+        padding-bottom: 10px;
+        &:first-child{
+            font-size: 30px;
+        }
+    }
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid #000;
+    
+}
+
+.similars{
+    border: 1px solid #000;
+    margin-top: 20px;
+
+}
+
+.similars__list{
+    display: flex;
+    div{
+        padding: 20px;
+        margin: 10px;
+        width: 100px;
+        height: 140px;
+    }
+}
+
+
+
