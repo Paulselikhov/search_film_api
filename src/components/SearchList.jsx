@@ -23,6 +23,19 @@ const SerailsList = () => {
         
     }
 
+    async function goToFilm2(){
+
+        const response = await axios.get(`https://kinopoiskapiunofficial.tech/api/v2.2/films/305/similars`,{
+                    method: 'GET',
+                    headers: {
+                'X-API-KEY': '4fdefa42-48de-42c9-850e-7d2efd595fca',
+                'Content-Type': 'application/json',
+                    },
+                })
+         console.log(response)       
+        
+    }
+
     if (showSerials.loading){
         return <h1>Идёт загрузка...</h1>
     }
@@ -33,7 +46,7 @@ const SerailsList = () => {
         <div>
             
             {showSerials.serials.map( item => 
-                <Post onClick = { () => goToFilm(item)} type={item.type} year={item.year} slogan={item.slogan} ratingImdb={item.ratingImdb} nameRu={item.nameRu} genres='not use' posterUrl={item.posterUrl} />
+                <Post onClick = { () => goToFilm2()} type={item.type} year={item.year} slogan={item.slogan} ratingImdb={item.ratingImdb} nameRu={item.nameRu} genres={item.genres} posterUrl={item.posterUrl} />
             )}
             
         </div>

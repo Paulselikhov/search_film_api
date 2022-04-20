@@ -17,7 +17,7 @@ const defaultState = {
         slogan: 'Нет слогана',
         description: 'Нео не представлял во что он влип. Мир виртуальных технологий очень опасен и не щадит никого. Он взял пушку и пошел всех мочить, потом попал в другое измерение и там творил всякие ужасные вещи и еще носил темные очки и темное пальто и вообще круто выглядел...',
         posterUrl:'https://kinopoiskapiunofficial.tech/images/posters/kp/961694.jpg',
-        plot: 'Nine year-old orphan Beth Harmon is quiet, sullen, and by all appearances unremarkable. That is, until she plays her first game of chess. Her senses grow sharper, her thinking clearer, and for the first time in her life she feels herself fully in control. By the age of sixteen, shes competing for the U.S. Open championship. But as Beth hones her skills on the professional circuit, the stakes get higher, her isolation grows more frightening, and the thought of escape becomes all the more tempting. Based on the book by Walter Tevis.',
+
         similars: [
             {   
                 title: 'Title not found',
@@ -66,7 +66,7 @@ export const searchReducer = (state = defaultState, action) => {
         case FETCH_SERIALS:
             return {...state, loading: true, error: null, serials: []}
         case FETCH_SERIALS_SUCCESS:
-            return {...state, loading: false, error: null, serials: action.payload}
+            return {...state, loading: false, error: null, serials: action.payload }
         case FETCH_SERIALS_ERROR:
             return {...state, loading: false, error: action.payload, serials: []}
         default:
