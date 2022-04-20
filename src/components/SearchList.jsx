@@ -16,17 +16,13 @@ const SerailsList = () => {
     const navigate = useNavigate();
    
     async function goToFilm(item){
-        
-        const response_similar1_title = await axios.get(`https://imdb-api.com/en/API/Title/k_x0zr25jc/${item.similars[0].id}`)
-
-        item.similars[0].genres = response_similar1_title.data.genres
-        item.similars[0].plot = response_similar1_title.data.plot 
 
         dispatch({type: FETCH_SERIALS_SUCCESS, payload: item.serials})
 
         navigate('/film', {state: item})
         
     }
+
     if (showSerials.loading){
         return <h1>Идёт загрузка...</h1>
     }
@@ -37,7 +33,7 @@ const SerailsList = () => {
         <div>
             
             {showSerials.serials.map( item => 
-                <Post onClick = { () => goToFilm(item)} type={item.type} year={item.year} awards={item.awards} imDbRating={item.imDbRating} id={item.id} title={item.title} genres={item.genres} image={item.image} />
+                <Post onClick = { () => goToFilm(item)} type={item.type} year={item.year} slogan={item.slogan} ratingImdb={item.ratingImdb} nameRu={item.nameRu} genres='not use' posterUrl={item.posterUrl} />
             )}
             
         </div>

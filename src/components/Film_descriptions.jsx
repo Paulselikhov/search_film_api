@@ -6,16 +6,18 @@ const Film_descriptions = () => {
 
   const showSerial = useLocation();
     console.dir(showSerial.state)
+
+
  
   return (
     <div className={classes.Film_descriptions}>
       
-      <div className={classes.title} style = { {background: `url(${showSerial.state.images[0].image}) 0 0/100% auto no-repeat`}}> {/* Тут будет изображение */}
+      <div className={classes.title} style = { {background: `url(${showSerial.state.coverUrl}) 130px 0/cover no-repeat`}}> {/* Тут будет изображение */}
       <div className={classes.black}> {/* Тут будет тень  */}
         <div className={classes.main} > {/* Блок с описанием */}
           <div className={classes.main_title}>{showSerial.state.title}</div>
           <div className={classes.main_children}>
-            <span>IMDb {showSerial.state.imDbRating}</span>
+            <span>IMDb {showSerial.state.ratingImdb}</span>
             <span>{showSerial.state.genres}&nbsp;&nbsp;&nbsp;|</span>
             <span>&nbsp;&nbsp;&nbsp;{showSerial.state.type}&nbsp;&nbsp;&nbsp;|</span>
             <span>&nbsp;&nbsp;&nbsp;{showSerial.state.year}</span>
@@ -23,14 +25,14 @@ const Film_descriptions = () => {
           <div className={classes.main_watch}>
           <a target="_blank" href={showSerial.state.trailer}>Watch</a>
         </div>
-        <div className={classes.main_awards}>{showSerial.state.awards}</div>
+        <div className={classes.main_awards}>{showSerial.state.slogan}</div>
         </div>
        
       </div>
     </div>
     <div className={classes.description}>
       <p>Watch {showSerial.state.title} on Richbee Shows</p>
-      <p>{showSerial.state.plot}</p>
+      <p>{showSerial.state.description}</p>
       <div className={classes.plot}>
         <div className={classes.similars_title}>You may also like</div>
         <div className={classes.similars__list}>
