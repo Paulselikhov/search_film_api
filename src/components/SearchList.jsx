@@ -24,7 +24,8 @@ const SerailsList = () => {
         'Content-Type': 'application/json',
             },
         })
- 
+        
+        console.log(response_similars)
         const response_similar_id = await axios.get(`https://kinopoiskapiunofficial.tech/api/v2.2/films/${response_similars.data.items[0].filmId}`,{
             method: 'GET',
             headers: {
@@ -38,8 +39,7 @@ const SerailsList = () => {
 
         dispatch({type: FETCH_SIMILARS_SUCCESS, payload: sim})
 
-        console.log(showSerials)
-        //navigate('/film', {state: item})
+        navigate('/film', {state: item})
         
     }
 
@@ -59,7 +59,6 @@ const SerailsList = () => {
                 <Post onClick = { () => goToFilm(item)} type={item.type} year={item.year} slogan={item.slogan} ratingImdb={item.ratingImdb} nameRu={item.nameRu} genres={item.genres} posterUrl={item.posterUrl} />
             )}
 
-            <div onClick = { () => console.log(showSerials)}>Проверить состояние</div>
         </div>
     )
 }

@@ -1,13 +1,14 @@
 import React from 'react';
 import classes from './Film_descriptions.module.scss';
 import { useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const Film_descriptions = () => {
 
   const showSerial = useLocation();
     console.dir(showSerial.state)
 
-
+    const state = useSelector ( state => state.searchReducer)
  
   return (
     <div className={classes.Film_descriptions}>
@@ -18,7 +19,7 @@ const Film_descriptions = () => {
           <div className={classes.main_title}>{showSerial.state.title}</div>
           <div className={classes.main_children}>
             <span>IMDb {showSerial.state.ratingImdb}</span>
-            <span>{showSerial.state.genres}&nbsp;&nbsp;&nbsp;|</span>
+            <span>{showSerial.state.genres[0].genre}&nbsp;&nbsp;&nbsp;|</span>
             <span>&nbsp;&nbsp;&nbsp;{showSerial.state.type}&nbsp;&nbsp;&nbsp;|</span>
             <span>&nbsp;&nbsp;&nbsp;{showSerial.state.year}</span>
           </div>
@@ -33,73 +34,26 @@ const Film_descriptions = () => {
     <div className={classes.description}>
       <p>Watch {showSerial.state.title} on Richbee Shows</p>
       <p>{showSerial.state.description}</p>
-      <div className={classes.plot}>
+      <div className={classes.description}>
         <div className={classes.similars_title}>You may also like</div>
         <div className={classes.similars__list}>
-          <div style = { {background: `url(${showSerial.state.similars[0].image}) 0 0/cover no-repeat`}}>
+          <div style = { {background: `url(${state.similars[0].posterUrl}) 0 0/cover no-repeat`}}>
             <div>
               <div>
-                {showSerial.state.similars[0].title}
+                {state.similars[0].nameRu}
               </div>
               <div>
-                 {showSerial.state.similars[0].genres}
+                 {state.similars[0].genres[0].genre}
               </div>
               <div>
-                  {showSerial.state.similars[0].plot}
+                  {state.similars[0].description}
               </div>
               <div>
-                IMDb {showSerial.state.similars[0].imDbRating}
+                IMDb {state.similars[0].ratingImdb}
               </div>
             </div>
           </div>
-          <div style = { {background: `url(${showSerial.state.similars[1].image}) 0 0/cover no-repeat`}}>
-            <div>
-              <div>
-                {showSerial.state.similars[1].title}
-              </div>
-              <div>
-                 {showSerial.state.similars[1].genres}
-              </div>
-              <div>
-                  {showSerial.state.similars[1].plot}
-              </div>
-              <div>
-                IMDb {showSerial.state.similars[1].imDbRating}
-              </div>
-            </div>
-          </div>
-          <div style = { {background: `url(${showSerial.state.similars[2].image}) 0 0/cover no-repeat`}}>
-            <div>
-              <div>
-                {showSerial.state.similars[2].title}
-              </div>
-              <div>
-                 {showSerial.state.similars[2].genres}
-              </div>
-              <div>
-                  {showSerial.state.similars[2].plot}
-              </div>
-              <div>
-                IMDb {showSerial.state.similars[2].imDbRating}
-              </div>
-            </div>
-          </div>
-          <div style = { {background: `url(${showSerial.state.similars[3].image}) 0 0/cover no-repeat`}}>
-            <div>
-              <div>
-                {showSerial.state.similars[3].title}
-              </div>
-              <div>
-                 {showSerial.state.similars[3].genres}
-              </div>
-              <div>
-                  {showSerial.state.similars[3].plot}
-              </div>
-              <div>
-                IMDb {showSerial.state.similars[3].imDbRating}
-              </div>
-            </div>
-          </div>
+          
           
               
               
