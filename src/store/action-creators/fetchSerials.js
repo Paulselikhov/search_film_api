@@ -31,7 +31,6 @@ export const fetchSerials = (inputValue) => {
 
     const keyword=inputValue;
     const key = 'dec3cfb4-ee86-4b1b-b0a3-a2d612a08a90';
-    console.log(keyword)
 
     console.log('dispatching...')
     return async(dispatch) => {

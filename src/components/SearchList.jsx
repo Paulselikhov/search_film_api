@@ -7,7 +7,7 @@ import axios from 'axios';
 import {FETCH_SIMILARS_SUCCESS } from '../store/reducers/searchReducer';
 
 
-const SerailsList = () => {
+const SearchList = () => {
     const showSerials = useSelector ( state => state.searchReducer)
 
     const dispatch = useDispatch()
@@ -24,19 +24,19 @@ const SerailsList = () => {
         'Content-Type': 'application/json',
             },
         })
-        
         console.log(response_similars)
-        const response_similar_id = await axios.get(`https://kinopoiskapiunofficial.tech/api/v2.2/films/${response_similars.data.items[0].filmId}`,{
+        const sim = [{}]
+        for (let i = 0; i < 4; i++) {
+            const response_similar_id = await axios.get(`https://kinopoiskapiunofficial.tech/api/v2.2/films/${response_similars.data.items[i].filmId}`,{
             method: 'GET',
             headers: {
-        'X-API-KEY': key,
-        'Content-Type': 'application/json',
-            },
-        })
-        console.log(response_similar_id)
-       
-        const sim = [response_similar_id.data]
-
+                'X-API-KEY': key,
+                'Content-Type': 'application/json',
+                },
+            })
+            sim[i] = response_similar_id.data
+        }
+        
         dispatch({type: FETCH_SIMILARS_SUCCESS, payload: sim})
 
         navigate('/film', {state: item})
@@ -55,12 +55,12 @@ const SerailsList = () => {
     return (
         <div>
             
-            {showSerials.items.map( item => 
-                <Post onClick = { () => goToFilm(item)} type={item.type} year={item.year} slogan={item.slogan} ratingImdb={item.ratingImdb} nameRu={item.nameRu} genres={item.genres} posterUrl={item.posterUrl} />
+            {showSerials.items.map( (item, index) => 
+                <Post onClick = { () => goToFilm(item)} index = {index} key = {index} />
             )}
 
         </div>
     )
 }
 
-export default SerailsList
+export default SearchList
