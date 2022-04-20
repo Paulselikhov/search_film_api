@@ -1,7 +1,7 @@
 import React from 'react';
-import classes from './Title.module.scss';
+import classes from './Main_Title.module.scss';
 
-const Title = () => {
+const Main_Title = () => {
   return (
     <div className={classes.title}>
           <div>Unlimited movies, TV shows, and more.</div>
@@ -10,4 +10,4 @@ const Title = () => {
   )
 }
 
-export default Title
+export default Main_Title

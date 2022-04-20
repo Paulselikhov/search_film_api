@@ -4,9 +4,10 @@ export const FETCH_SERIALS = "FETCH_SERIALS";
 export const FETCH_SERIALS_SUCCESS = "FETCH_SERIALS_SUCCESS";
 export const FETCH_SERIALS_ERROR = "FETCH_SERIALS_ERROR";
 export const FETCH_SIMILARS_SUCCESS = "FETCH_SIMILARS_SUCCESS";
+export const GET_FILM_ID = "GET_FILM_ID";
 
 const defaultState = {
-
+    film_id: null,
     items: [{
         imbdId: 'id999', 
         nameRu:'Stangers things: part 1', 
@@ -44,6 +45,8 @@ export const searchReducer = (state = defaultState, action) => {
             return {...state, loading: false, error: null, items:action.payload }
         case FETCH_SIMILARS_SUCCESS:
             return {...state, loading: false, error: null, similars:action.payload }
+        case GET_FILM_ID:
+            return {...state, loading: false, error: null, film_id:action.payload }
         case FETCH_SERIALS_ERROR:
             return {...state, loading: false, error: action.payload, items: []}
         default:

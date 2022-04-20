@@ -1,12 +1,14 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux';
-
-import SearchList from './../components/SearchList';
-import { fetchSerials } from './../store/action-creators/fetchSerials';
 import "./../styles/nullstyle.css";
 import "./../styles/Main.css";
-import Title from '../components/Title';
-import Search from '../components/UI/Search';
+
+import Main_Title from './../components/Main/Main_Title/Main_Title';
+import Search_Input_Button from '../components/UI/Main_Search_Input/Search_Input_Button';
+import Main_Post_List from '../components/Main/Main_Post_List';
+
+
+
+
 
 
 const Main = () => {
@@ -14,9 +16,9 @@ const Main = () => {
     return (
       <div className="Main">
         <div className="Content">
-          <Title/>
-          <Search/>
-          <SearchList/>
+          <Main_Title/>
+          <Search_Input_Button/>
+          <Main_Post_List/>
         </div>
       </div>
     );

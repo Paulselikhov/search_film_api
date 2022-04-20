@@ -1,10 +1,10 @@
 import React from 'react';
-import classes from './Post.module.scss';
+import classes from './Main_Post.module.scss';
 import { useSelector } from 'react-redux';
 
 
 
-const Post = ({index, ...props}) => {
+const Main_Post = ({index, ...props}) => {
 
   const state = useSelector ( state => state.searchReducer)
 
@@ -29,4 +29,4 @@ const Post = ({index, ...props}) => {
   )
 }
 
-export default Post
+export default Main_Post

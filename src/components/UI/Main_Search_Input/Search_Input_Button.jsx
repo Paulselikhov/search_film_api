@@ -1,12 +1,12 @@
 import React from 'react';
 import classes from './Search.module.scss';
 import SearchInput from './SearchInput';
-import SearchButton from './SearchButton';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchSerials } from './../../store/action-creators/fetchSerials';
+import { fetchSerials } from '../../../store/action-creators/fetchSerials';
+import SearchButton from './SearchButton';
 
 
-const Search = () => {
+const Search_Input_Button = () => {
 
     const showInput = useSelector( state => state.inputReducer)
 
@@ -24,4 +24,4 @@ const Search = () => {
   )
 }
 
-export default Search
+export default Search_Input_Button
