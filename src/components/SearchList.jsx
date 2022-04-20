@@ -16,7 +16,14 @@ const SerailsList = () => {
     const navigate = useNavigate();
    
     async function goToFilm(item){
-
+        const key ='dec3cfb4-ee86-4b1b-b0a3-a2d612a08a90';
+        const response_similars = await axios.get(`https://kinopoiskapiunofficial.tech/api/v2.2/films/${response.data.items[i].kinopoiskId}`,{
+            method: 'GET',
+            headers: {
+        'X-API-KEY': key,
+        'Content-Type': 'application/json',
+            },
+        })
         dispatch({type: FETCH_SERIALS_SUCCESS, payload: item.serials})
 
         navigate('/film', {state: item})
