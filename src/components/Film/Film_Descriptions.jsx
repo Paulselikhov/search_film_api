@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Film_Similar from '../UI/Film_Similar/Film_Similar';
 import { FETCH_SERIALS_SUCCESS } from '../../store/reducers/searchReducer';
 import { GET_FILM_ID } from './../../store/reducers/searchReducer';
+import { getSimilars } from './../../store/action-creators/getSimilars';
 
 
 const Film_Descriptions = () => {
@@ -17,8 +18,8 @@ const Film_Descriptions = () => {
   const index = state.film_id;
   const item = state.items
 
-  async function changeToSimilar(similar_index){
-
+  async function changeToSimilar(similar_index, item){
+    dispatch(getSimilars(item))
     dispatch({type: GET_FILM_ID, payload: similar_index})
     dispatch({type: FETCH_SERIALS_SUCCESS, payload: state.similars})
     console.log('working...')
@@ -52,7 +53,7 @@ const Film_Descriptions = () => {
           <div className={classes.similars_title}>You may also like</div>
           <div className={classes.similars__list}>
             {state.similars.map( (item, index) => 
-              <Film_Similar onClick={ () => changeToSimilar(item.key)} index={index} key={index}/>
+              <Film_Similar onClick={ () => changeToSimilar(item.key, item)} index={index} key={index}/>
               )}
           </div>
         </div>
