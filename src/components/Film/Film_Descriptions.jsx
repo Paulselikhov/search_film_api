@@ -31,7 +31,7 @@ const Film_Descriptions = () => {
       <div className={classes.title} style = { {background: `url(${item[index].coverUrl}) 130px 0/cover no-repeat`}}> {/* Тут будет изображение */}
         <div className={classes.black}> {/* Тут будет тень  */}
           <div className={classes.main} > {/* Блок с описанием */}
-            <div className={classes.main_title}>{item[index].title}</div>
+            <div className={classes.main_title}>{item[index].nameRu}</div>
             <div className={classes.main_children}>
               <span>IMDb {item[index].ratingImdb}</span>
               <span>{item[index].genres[0].genre}&nbsp;&nbsp;&nbsp;|</span>
