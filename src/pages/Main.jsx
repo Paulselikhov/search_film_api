@@ -20,7 +20,7 @@ const Main = () => {
             <Main_Title/>
             <Search_Input_Button/>
           </div>
-          <div className="Content">
+          <div className="Content_hidden">
               <Main_Post_List/>
             </div>
         </div>

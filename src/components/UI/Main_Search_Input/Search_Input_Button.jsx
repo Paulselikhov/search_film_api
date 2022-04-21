@@ -17,8 +17,12 @@ const Search_Input_Button = () => {
     }
   return (
     <div className={classes.search}>
-        <SearchInput onChange = { (e) => dispatch({type: "SET_INPUT", payload: e.target.value })}/>
-        <SearchButton onClick={getDispatch}/>
+        <SearchInput onChange = { (e) => dispatch({type: "SET_INPUT", payload: e.target.value })}
+        />
+        <SearchButton onClick={ (e) => {
+          console.log(e)
+          e.target.parentElement.parentElement.parentElement.nextElementSibling.className='Content'
+          getDispatch()}}/>
             
     </div>
   )

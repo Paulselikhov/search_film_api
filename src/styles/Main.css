@@ -17,12 +17,19 @@
 }
 
 .Content{
+    display: block;
     height: 180px;
     overflow: hidden;
-    -webkit-box-shadow: 2px -1px 28px 28px rgba(51, 81, 238, 0.2) inset;
-    -moz-box-shadow: 2px -1px 28px 28px rgba(51, 81, 238, 0.2) inset;
-    box-shadow: 2px -1px 28px 28px rgba(51, 81, 238, 0.2) inset;
+}
 
+.Content_hidden{
+    display: none;
+    height: 180px;
+    overflow: hidden;
+}
+
+.Content::-webkit-scrollbar{
+    width: 0;
 }
 
 .Content:hover{

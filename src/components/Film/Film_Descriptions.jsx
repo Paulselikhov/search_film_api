@@ -53,7 +53,8 @@ const Film_Descriptions = () => {
           <div className={classes.similars_title}>You may also like</div>
           <div className={classes.similars__list}>
             {state.similars.map( (item, index) => 
-              <Film_Similar onClick={ () => changeToSimilar(item.key, item)} index={index} key={index}/>
+              <Film_Similar onClick={ (e) => 
+                changeToSimilar(item.key, item)} index={index} key={index}/>
               )}
           </div>
         </div>
