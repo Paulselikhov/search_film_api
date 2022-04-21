@@ -2,30 +2,10 @@ import axios from "axios";
 import { FETCH_SERIALS, FETCH_SERIALS_ERROR, FETCH_SERIALS_SUCCESS } from "../reducers/searchReducer";
 
 
-/* 
-keys:
-Paulselikhov = k_mj2b6dz1
-Paulselikhov2 = k_ksqaiwvn
-vika = k_nlew0aq1
 
-free keys for http://www.omdbapi.com/?i=tt3896198&apikey=4b447405
-'4b447405',
-            'eb0c0475',
-            '7776cbde',
-            'ff28f90b',
-            '6c3a2d45',
-            'b07b58c8',
-            'ad04b643',
-            'a95b5205',
-            '777d9323',
-            '2c2c3314',
-            'b5cff164',
-            '89a9f57d',
-            '73a9858a',
-            'efbd8357'
 
-            4fdefa42-48de-42c9-850e-7d2efd595fca
-*/
+/* 4fdefa42-48de-42c9-850e-7d2efd595fca */
+
 
 export const fetchSerials = (inputValue) => {
 
@@ -60,8 +40,6 @@ export const fetchSerials = (inputValue) => {
                     response.data.items[i].description = response_id.data.description
                     response.data.items[i].coverUrl = response_id.data.coverUrl
                     
-                    
-
                 }
                 dispatch({type: FETCH_SERIALS_SUCCESS, payload: response.data.items})
             } else {

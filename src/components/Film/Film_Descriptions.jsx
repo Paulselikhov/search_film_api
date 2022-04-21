@@ -12,8 +12,7 @@ const Film_Descriptions = () => {
 
   const dispatch = useDispatch()
 
-  
-  
+
   const state = useSelector ( state => state.searchReducer)
   const index = state.film_id;
   const item = state.items
