@@ -18,6 +18,7 @@
 .main_title{
     font-size: 72px;
     margin-bottom: 20px;
+    text-shadow: 1px 1px 8px #000;
 }
 
 .main_children{
@@ -45,6 +46,30 @@
             font-weight: 900;
             font-size: 12px;
             line-height: 15px;
+        }
+        &:nth-child(2){
+            margin-right: 15px;
+            text-align: center;
+            width: 120px;
+            height: 30px;
+
+            padding: 7px 12px 7px;
+            border-radius: 8px;
+            background-color: yellow;
+            color: black;
+
+            font-weight: 900;
+            font-size: 12px;
+            line-height: 15px;
+        }
+        &:nth-child(3){
+            text-shadow: 1px 1px 8px #000;
+        }
+        &:nth-child(4){
+            text-shadow: 1px 1px 8px #000;
+        }
+        &:nth-child(5){
+            text-shadow: 1px 1px 8px #000;
         }
     }
     

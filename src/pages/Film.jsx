@@ -5,9 +5,11 @@ import Film_Descriptions from '../components/Film/Film_Descriptions';
 
 
 
+
+
 const Film = () => {
   return (
-    <div>
+    <div className="Main">
       <Film_Header/>
       <Film_Descriptions/>
     </div>

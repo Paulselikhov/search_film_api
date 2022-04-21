@@ -11,17 +11,19 @@ const Film_Similar = ({index, ...props}) => {
       <div  style = { {background: `url(${state.similars[index].posterUrl}) 0 0/cover no-repeat`}}>
         <div>
           <div>
-            {state.similars[index].nameRu}
+            <div>
+              {state.similars[index].nameRu}
+            </div>
+            <div>
+              {state.similars[index].genres[0].genre}
+            </div>
+            <div>
+                {state.similars[index].shortDescription}
+            </div>
           </div>
-          <div>
-            {state.similars[index].genres[0].genre}
-          </div>
-          <div>
-              {state.similars[index].description}
-          </div>
-          <div>
+          <p>
             IMDb {state.similars[index].ratingImdb}
-          </div>
+          </p>
         </div>
       </div>
     </div> 

@@ -21,7 +21,7 @@ const Search_Input_Button = () => {
         />
         <SearchButton onClick={ (e) => {
           console.log(e)
-          e.target.parentElement.parentElement.parentElement.nextElementSibling.className='Content'
+          e.target.parentElement.parentElement.nextElementSibling.className='main_Content'
           getDispatch()}}/>
             
     </div>

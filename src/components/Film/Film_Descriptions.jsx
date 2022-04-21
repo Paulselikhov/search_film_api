@@ -34,6 +34,7 @@ const Film_Descriptions = () => {
             <div className={classes.main_title}>{item[index].nameRu}</div>
             <div className={classes.main_children}>
               <span>IMDb {item[index].ratingImdb}</span>
+              <span>Кинопоиск {item[index].ratingKinopoisk}</span>
               <span>{item[index].genres[0].genre}&nbsp;&nbsp;&nbsp;|</span>
               <span>&nbsp;&nbsp;&nbsp;{item[index].type}&nbsp;&nbsp;&nbsp;|</span>
               <span>&nbsp;&nbsp;&nbsp;{item[index].year}</span>
