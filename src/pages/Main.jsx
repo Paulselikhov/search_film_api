@@ -15,11 +15,18 @@ const Main = () => {
     
     return (
       <div className="Main">
-        <div className="Content">
-          <Main_Title/>
-          <Search_Input_Button/>
-          <Main_Post_List/>
+        <div className="Background">
+          <div className="Title">
+            <Main_Title/>
+            <Search_Input_Button/>
+          </div>
+          <div className="Content">
+              <Main_Post_List/>
+            </div>
         </div>
+        
+        
+          
       </div>
     );
   }

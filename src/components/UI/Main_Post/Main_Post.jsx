@@ -10,6 +10,7 @@ const Main_Post = ({index, ...props}) => {
 
   return (
     <div className={classes.main} {...props}>
+      
         <div className={classes.main_image} style={{background: `url(${state.items[index].posterUrl})0 0/100% auto no-repeat`}} ></div> {/* Изображение */}
         <div className={classes.main_post}>
           <div className={classes.post}> {/* Пост и рейтинг */}

@@ -1,12 +1,40 @@
 .Main{
-    border: 1px solid rgb(245, 2, 2);
-    background: url(/src/img/background.png) 0 0/cover no-repeat;
     color: white;
-
+    
     
 }
 
-.Content{
+.Background{
+    background: url(/src/img/background.png) 0 0/cover no-repeat;
+    height: 100vh;
+    
+}
+.Title{
     max-width: 728px;
     margin: 0px auto;
+    padding-bottom: 40px;
+     /* высота равна 100% дисплея */
+}
+
+.Content{
+    height: 180px;
+    overflow: hidden;
+    -webkit-box-shadow: 2px -1px 28px 28px rgba(51, 81, 238, 0.2) inset;
+    -moz-box-shadow: 2px -1px 28px 28px rgba(51, 81, 238, 0.2) inset;
+    box-shadow: 2px -1px 28px 28px rgba(51, 81, 238, 0.2) inset;
+
+}
+
+.Content:hover{
+    background: rgb(22, 18, 18);
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    height: 70vh;
+    width: 70vw;
+
+    border-radius: 60px;
+    box-shadow: 0px 0px 20px rgb(109, 96, 96);
+
+    overflow-y: scroll;
 }
