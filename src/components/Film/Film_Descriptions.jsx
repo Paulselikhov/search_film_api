@@ -26,32 +26,37 @@ const Film_Descriptions = () => {
   }
 
   return (
-    <div className={classes.Film_descriptions}>
+    <div>
 
-      <div className={classes.title} style = { {background: `url(${item[index].coverUrl}) 130px 0/cover no-repeat`}}> {/* Тут будет изображение */}
+      <div className={classes.title} style = { {background: `url(${item[index].coverUrl}) 200px 0/cover no-repeat`}}> {/* Тут будет изображение */}
         <div className={classes.black}> {/* Тут будет тень  */}
           <div className={classes.main} > {/* Блок с описанием */}
-            <div className={classes.main_title}>{item[index].nameRu}</div>
-            <div className={classes.main_children}>
-              <span>IMDb {item[index].ratingImdb}</span>
-              <span>Кинопоиск {item[index].ratingKinopoisk}</span>
-              <span>{item[index].genres[0].genre}&nbsp;&nbsp;&nbsp;|</span>
-              <span>&nbsp;&nbsp;&nbsp;{item[index].type}&nbsp;&nbsp;&nbsp;|</span>
-              <span>&nbsp;&nbsp;&nbsp;{item[index].year}</span>
+            <div>
+              <div className={classes.main_title}>{item[index].nameRu}</div>
+              <div className={classes.main_children}>
+                <span>IMDb {item[index].ratingImdb}</span>
+                <span>Кинопоиск {item[index].ratingKinopoisk}</span>
+                <span>{item[index].genres[0].genre}&nbsp;&nbsp;&nbsp;|</span>
+                <span>&nbsp;&nbsp;&nbsp;{item[index].type}&nbsp;&nbsp;&nbsp;|</span>
+                <span>&nbsp;&nbsp;&nbsp;{item[index].year}</span>
+              </div>
             </div>
-            <div className={classes.main_watch}>
-              <a target="_blank" href={item[index].trailer}>Watch</a>
+
+            <div>
+              <div className={classes.main_watch}>
+                <a target="_blank" href={item[index].trailer}>Watch</a>
+              </div>
+              <div className={classes.main_awards}>{item[index].slogan}</div>
             </div>
-            <div className={classes.main_awards}>{item[index].slogan}</div>
           </div>
         </div>
       </div>
       
       <div className={classes.description}>
-        <p>Watch {item[index].title} on Richbee Shows</p>
+        <p>Смотри {item[index].nameRu} на Richbee Shows</p>
         <p>{item[index].description}</p>
         <div className={classes.similars}>
-          <div className={classes.similars_title}>You may also like</div>
+          <div className={classes.similars_title}>Также может понравиться</div>
           <div className={classes.similars__list}>
             {state.similars.map( (item, index) => 
               <Film_Similar onClick={ (e) => 

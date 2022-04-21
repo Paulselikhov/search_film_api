@@ -1,15 +1,16 @@
 .header{
+    height: 8em;
+
     background: #050505;
-    height: 80px;
     box-shadow: 0px 5px 6px 0px #000000;
     position: relative;
-
 }
 
 .text{
-    font-weight: 300; 
-    font-size: 24px;
-    line-height: 29.26px;
-    padding: 20px 0px 0px 50px;
+    padding: 1em 0px 0px 1em;
+
     color: #FEFEFE;
+    font-size: 3em;
+    font-weight: 300; 
+    line-height: 29.26px;
 }
