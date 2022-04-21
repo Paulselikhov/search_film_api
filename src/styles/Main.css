@@ -1,38 +1,36 @@
 .Main{
+    font-family: 'Montserrat', sans-serif;
     color: white;
-    
     
 }
 
-.Background{
+.main_Background{
     background: url(/src/img/background.png) 0 0/cover no-repeat;
     height: 100vh;
     
 }
-.Title{
+.main_Title{
     max-width: 728px;
     margin: 0px auto;
     padding-bottom: 40px;
      /* высота равна 100% дисплея */
+    
 }
 
-.Content{
+.main_Content{
     display: block;
     height: 180px;
     overflow: hidden;
 }
-
-.Content_hidden{
+.main_Content_hidden{
     display: none;
     height: 180px;
     overflow: hidden;
 }
-
-.Content::-webkit-scrollbar{
+.main_Content::-webkit-scrollbar{
     width: 0;
 }
-
-.Content:hover{
+.main_Content:hover{
     background: rgb(22, 18, 18);
     position: absolute;
     top: 15%;
