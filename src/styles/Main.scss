@@ -1,9 +1,9 @@
 .Main{
     font-family: 'Montserrat', sans-serif;
-    color: white; // не наследуется
-    background: url(./../img/background.png) 0 0/cover no-repeat; // не наследуется
-    height: 100vh; // не наследуется
-    font-size: 10px; // не наследуется
+    color: white; // не наследуется на другие страницы
+    background: url(./../img/background.png) 0 0/cover no-repeat; // не наследуется на другие страницы
+    height: 100vh; // не наследуется на другие страницы
+    font-size: 10px; // не наследуется на другие страницы
 
     .main_Title{
         padding-top: 5%;

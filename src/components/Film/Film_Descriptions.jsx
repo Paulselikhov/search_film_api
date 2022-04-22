@@ -44,7 +44,7 @@ const Film_Descriptions = () => {
               <div className={classes.main_watch}>
                 <a target="_blank" href={item[index].trailer}>Watch</a>
               </div>
-              <div className={classes.main_awards}>{item[index].slogan}</div>
+              <div className={classes.main_slogan}>{item[index].slogan}</div>
             </div>
           </div>
         </div>
