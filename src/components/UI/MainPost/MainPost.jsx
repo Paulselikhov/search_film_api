@@ -1,6 +1,6 @@
 import React from 'react';
-import classes from './MainPost.module.scss';
 import { useSelector } from 'react-redux';
+import classes from './MainPost.module.scss';
 
 
 

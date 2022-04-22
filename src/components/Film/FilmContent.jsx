@@ -1,11 +1,10 @@
 import React from 'react';
-import classes from './FilmContent.module.scss';
-import { useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import FilmSimilar from '../UI/FilmSimilar/FilmSimilar';
 import { FETCH_SERIALS_SUCCESS } from '../../store/reducers/searchReducer';
 import { GET_FILM_ID } from '../../store/reducers/searchReducer';
 import { getSimilars } from '../../store/action-creators/getSimilars';
+import classes from './FilmContent.module.scss';
 
 
 const FilmContent = () => {

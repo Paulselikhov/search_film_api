@@ -1,10 +1,10 @@
-import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { getSimilars } from '../../store/action-creators/getSimilars';
 import MainPost from '../UI/MainPost/MainPost';
-import { GET_FILM_ID } from '../../store/reducers/searchReducer';
 import Loader from '../UI/Loader/Loader';
+import { GET_FILM_ID } from '../../store/reducers/searchReducer';
 import './../../styles/Main.scss';
 
 

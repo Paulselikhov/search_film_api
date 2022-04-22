@@ -1,9 +1,10 @@
 import React from 'react';
-import classes from './Search.module.scss';
+import SearchButton from './SearchButton';
 import SearchInput from './SearchInput';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchSerials } from '../../../store/action-creators/fetchSerials';
-import SearchButton from './SearchButton';
+import classes from './Search.module.scss';
+
 
 
 const SearchInputButton = () => {
