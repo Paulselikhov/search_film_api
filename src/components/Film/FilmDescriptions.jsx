@@ -26,7 +26,7 @@ const FilmDescriptions = () => {
 
   return (
     <div className={classes.film}>
-      <div className={classes.main} style = { {background: `url(${item[index].coverUrl}) 200px 0/cover no-repeat`}}> 
+      <div className={classes.film_main} style = { {background: `url(${item[index].coverUrl}) 200px 0/cover no-repeat`}}> 
         <div className={classes.main_shadow}> {/* Тут будет тень  */}
           <div className={classes.main_content} > {/* Блок с описанием */}
             <div>
@@ -50,7 +50,7 @@ const FilmDescriptions = () => {
         </div>
       </div>
       
-      <div className={classes.description}>
+      <div className={classes.film_description}>
         <p>Смотри {item[index].nameRu} на Richbee Shows</p>
         <p>{item[index].description}</p>
         <div className={classes.description_similars}>

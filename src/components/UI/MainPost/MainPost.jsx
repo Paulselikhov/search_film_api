@@ -15,18 +15,18 @@ const MainPost = ({index, ...props}) => {
         <div className={classes.main_post}>
           <div className={classes.post}> {/* Пост и рейтинг */}
             
-                <div className={classes.title}>{/* Заголовок */}
+                <div className={classes.post_title}>{/* Заголовок */}
                     <h1>{state.items[index].nameRu}</h1>
-                    <div className={classes.description}>{state.items[index].type} | {
+                    <div className={classes.title_description}>{state.items[index].type} | {
                     (state.items[index].genres[0] === undefined)? /* Временное условие! */
                     state.items[index].genres[0]
                     : state.items[index].genres[0].genre
                   } | {state.items[index].year}</div> {/* TVSeries | Drama | 2020 */}
                 </div> 
             
-                <div className={classes.rating}>IMDb {state.items[index].ratingImdb}</div> {/* Рейтинг */} 
+                <div className={classes.post_rating}>IMDb {state.items[index].ratingImdb}</div> {/* Рейтинг */} 
           </div> 
-          <div className={classes.awards}>{state.items[index].slogan}</div> {/* Rating */}
+          <div className={classes.slogan}>{state.items[index].slogan}</div> {/* Rating */}
         </div>
         
         

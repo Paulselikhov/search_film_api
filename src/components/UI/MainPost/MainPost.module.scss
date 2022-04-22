@@ -16,76 +16,78 @@
     &:active{
         background-color: rgb(0, 0, 0);
     }
-  }
 
-.main_image{
+    .main_image{
     
-    border-radius: 5px;
-    font-size: 12px; // изменить
-    padding: 5px; // изменить
-    margin: 10px;
-    color: white; // изменить
+        border-radius: 5px;
+        font-size: 12px; // изменить
+        padding: 5px; // изменить
+        margin: 10px;
+        color: white; // изменить
+    
+        width: 100px;
+        height: 142px;
+    }  
+    
+    .main_post{
+        flex-basis:80%;
+        display: flex;
+        flex-direction: column;
 
-    width: 100px;
-    height: 142px;
-}  
+        .post{
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        
+            padding: 5px; // изменить
+            margin: 10px 10px 0px 10px;
 
-.main_post{
-    flex-basis:80%;
-    display: flex;
-    flex-direction: column;
-}
-.post{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+            .post_title{
+                flex-basis:78%;
+                margin-right: 20px;
+                padding: 10px;
+                h1{
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 29.26px;
+                }
+                .title_description{
+                    font-size: 10px;
+                    padding: 5px;
+                
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 17.07px;
+                }
+            }
 
-    padding: 5px; // изменить
-    margin: 10px 10px 0px 10px;
-}
+            .post_rating{
+                margin-top: 15px;
+                color: black;
+                background: yellow;
+                padding: 5px;
+            
+                border-radius: 5px;
+            
+                font-size: 12px;
+                font-weight: 900;
+                line-height: 15px;
+            }
+        }
+        
+        .slogan{
+            padding: 5px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 14.63px;
+            margin: 0px 10px 0px 10px;
+        }
 
-.awards{
-    padding: 5px;
-    padding-top: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 14.63px;
-    margin: 0px 10px 0px 10px;
-}
-
-
-.title{
-    flex-basis:78%;
-    margin-right: 20px;
-    padding: 10px;
-    h1{
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 29.26px;
     }
-}
-
-.description{
-    font-size: 10px;
-    padding: 5px;
-
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 17.07px;
-}
-
-
-.rating{
-    margin-top: 15px;
-    color: black;
-    background: yellow;
-    padding: 5px;
-
-    border-radius: 5px;
-
-    font-size: 12px;
-    font-weight: 900;
-    line-height: 15px;
-}
+    
+    
+    
+  }
 
