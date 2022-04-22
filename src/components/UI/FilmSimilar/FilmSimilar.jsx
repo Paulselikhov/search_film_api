@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import classes from './Film_Similar.module.scss';
+import classes from './FilmSimilar.module.scss';
 
-const Film_Similar = ({index, ...props}) => {
+const FilmSimilar = ({index, ...props}) => {
 
   const state = useSelector ( state => state.searchReducer)
 
@@ -30,4 +30,4 @@ const Film_Similar = ({index, ...props}) => {
   )
 }
 
-export default Film_Similar
+export default FilmSimilar

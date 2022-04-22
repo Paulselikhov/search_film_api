@@ -1,19 +1,19 @@
 import React from 'react'
 import "./../styles/nullstyle.css";
 import "./../styles/Main.scss";
-import Main_Title from './../components/Main/Main_Title/Main_Title';
-import Search_Input_Button from '../components/UI/Main_Search_Input/Search_Input_Button';
-import Main_Post_List from '../components/Main/Main_Post_List';
+import MainTitle from './../components/Main/MainTitle/MainTitle';
+import SearchInputButton from '../components/UI/MainSearchInput/SearchInputButton';
+import MainPostList from '../components/Main/MainPostList';
 
 const Main = () => {
     
     return (
       <div className="Main">
           <div className="main_Title">
-            <Main_Title/>
+            <MainTitle/>
           </div>
-            <Search_Input_Button/> 
-            <Main_Post_List/>
+            <SearchInputButton/> 
+            <MainPostList/>
         
       </div>
     );

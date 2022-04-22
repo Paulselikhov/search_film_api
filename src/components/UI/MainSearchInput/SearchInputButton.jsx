@@ -6,7 +6,7 @@ import { fetchSerials } from '../../../store/action-creators/fetchSerials';
 import SearchButton from './SearchButton';
 
 
-const Search_Input_Button = () => {
+const SearchInputButton = () => {
 
     const showInput = useSelector( state => state.inputReducer)
 
@@ -30,4 +30,4 @@ const Search_Input_Button = () => {
   )
 }
 
-export default Search_Input_Button
+export default SearchInputButton

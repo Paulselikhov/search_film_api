@@ -1,8 +1,8 @@
 import React from 'react';
-import classes from './Film_Header.module.scss';
+import classes from './FilmHeader.module.scss';
 
 
-const Film_Header = () => {
+const FilmHeader = () => {
   return (
     <div className = {classes.header}>
             <div className={classes.text}>Richbee Shows</div>
@@ -10,4 +10,4 @@ const Film_Header = () => {
   )
 }
 
-export default Film_Header
+export default FilmHeader

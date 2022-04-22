@@ -1,12 +1,12 @@
 import React from 'react';
-import Film_Header from '../components/UI/Film_Header/Film_Header';
-import Film_Descriptions from '../components/Film/Film_Descriptions';
+import FilmHeader from '../components/UI/FilmHeader/FilmHeader';
+import FilmDescriptions from '../components/Film/FilmDescriptions';
 
 const Film = () => {
   return (
     <div>
-      <Film_Header/>
-      <Film_Descriptions/>
+      <FilmHeader/>
+      <FilmDescriptions/>
     </div>
   )
 }

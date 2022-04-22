@@ -5,13 +5,13 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import {FETCH_SIMILARS_SUCCESS } from '../../store/reducers/searchReducer';
 import { getSimilars } from '../../store/action-creators/getSimilars';
-import Main_Post from '../UI/Main_Post/Main_Post';
-import { GET_FILM_ID } from './../../store/reducers/searchReducer';
-import Loader from './../UI/Loader/Loader';
+import MainPost from '../UI/MainPost/MainPost';
+import { GET_FILM_ID } from '../../store/reducers/searchReducer';
+import Loader from '../UI/Loader/Loader';
 import './../../styles/Main.scss';
 
 
-const Main_Post_List = () => {
+const MainPostList = () => {
     
     const showSerials = useSelector ( state => state.searchReducer)
     console.log(showSerials, 'Гавно')
@@ -51,12 +51,12 @@ const Main_Post_List = () => {
 
             <div className="main_Content_post" >
 
-            <Main_Post onClick = { () => goToFilm(showSerials.items[0], showSerials.items[0].key)} index = "0" key = "0" />
+            <MainPost onClick = { () => goToFilm(showSerials.items[0], showSerials.items[0].key)} index = "0" key = "0" />
                 
             </div>
         <div className="main_Content_list">
             {showSerials.items.map( (item, index) =>
-                <Main_Post onClick = { () => goToFilm(item, item.key)} index = {index} key = {index} />
+                <MainPost onClick = { () => goToFilm(item, item.key)} index = {index} key = {index} />
         
         )}
         </div>
@@ -64,4 +64,4 @@ const Main_Post_List = () => {
      )  
 }
 
-export default Main_Post_List
+export default MainPostList

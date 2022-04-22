@@ -1,14 +1,14 @@
 import React from 'react';
-import classes from './Film_Descriptions.module.scss';
+import classes from './FilmDescriptions.module.scss';
 import { useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import Film_Similar from '../UI/Film_Similar/Film_Similar';
+import FilmSimilar from '../UI/FilmSimilar/FilmSimilar';
 import { FETCH_SERIALS_SUCCESS } from '../../store/reducers/searchReducer';
-import { GET_FILM_ID } from './../../store/reducers/searchReducer';
-import { getSimilars } from './../../store/action-creators/getSimilars';
+import { GET_FILM_ID } from '../../store/reducers/searchReducer';
+import { getSimilars } from '../../store/action-creators/getSimilars';
 
 
-const Film_Descriptions = () => {
+const FilmDescriptions = () => {
 
   const dispatch = useDispatch()
 
@@ -57,7 +57,7 @@ const Film_Descriptions = () => {
           <div className={classes.similars_title}>Также может понравиться</div>
           <div className={classes.similars__list}>
             {state.similars.map( (item, index) => 
-              <Film_Similar onClick={ (e) => 
+              <FilmSimilar onClick={ (e) => 
                 changeToSimilar(item.key, item)} index={index} key={index}/>
               )}
           </div>
@@ -68,4 +68,4 @@ const Film_Descriptions = () => {
   )
 }
 
-export default Film_Descriptions
+export default FilmDescriptions
