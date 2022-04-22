@@ -7,7 +7,6 @@ import { FETCH_SIMILARS_SUCCESS } from '../reducers/searchReducer';
 export const getSimilars = (item) => {
     
     const key ='dec3cfb4-ee86-4b1b-b0a3-a2d612a08a90';
-    console.log(item)
     return async(dispatch) => {
        
         const response_similars = await axios.get(`https://kinopoiskapiunofficial.tech/api/v2.2/films/${item.kinopoiskId}/similars`,{
@@ -19,6 +18,7 @@ export const getSimilars = (item) => {
         })
 
         const sim = [{}]
+        
         for (let i = 0; i < 4; i++) {
             const response_similar_id = await axios.get(`https://kinopoiskapiunofficial.tech/api/v2.2/films/${response_similars.data.items[i].filmId}`,{
             method: 'GET',

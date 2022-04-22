@@ -17,15 +17,8 @@ const SearchInputButton = () => {
     }
   return (
     <div className={classes.search}>
-        <SearchInput onChange = { (e) => dispatch({type: "SET_INPUT", payload: e.target.value })}
-        />
-        <SearchButton onClick={ (e) => {
-          console.log(e)
-          getDispatch(e)
-          
-          
-          }}/>
-            
+        <SearchInput onChange = { (e) => dispatch({type: "SET_INPUT", payload: e.target.value })}/>
+        <SearchButton onClick={ (e) => getDispatch(e)}/>  
     </div>
   )
 }

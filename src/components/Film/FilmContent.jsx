@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './FilmDescriptions.module.scss';
+import classes from './FilmContent.module.scss';
 import { useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import FilmSimilar from '../UI/FilmSimilar/FilmSimilar';
@@ -8,7 +8,7 @@ import { GET_FILM_ID } from '../../store/reducers/searchReducer';
 import { getSimilars } from '../../store/action-creators/getSimilars';
 
 
-const FilmDescriptions = () => {
+const FilmContent = () => {
 
   const dispatch = useDispatch()
 
@@ -21,7 +21,7 @@ const FilmDescriptions = () => {
     dispatch(getSimilars(item))
     dispatch({type: GET_FILM_ID, payload: similar_index})
     dispatch({type: FETCH_SERIALS_SUCCESS, payload: state.similars})
-    console.log('working...')
+    console.log('ChangeToSimilar working...')
   }
 
   return (
@@ -68,4 +68,4 @@ const FilmDescriptions = () => {
   )
 }
 
-export default FilmDescriptions
+export default FilmContent

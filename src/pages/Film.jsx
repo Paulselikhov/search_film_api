@@ -1,12 +1,12 @@
 import React from 'react';
 import FilmHeader from '../components/UI/FilmHeader/FilmHeader';
-import FilmDescriptions from '../components/Film/FilmDescriptions';
+import FilmContent from './../components/Film/FilmContent';
 
 const Film = () => {
   return (
     <div>
       <FilmHeader/>
-      <FilmDescriptions/>
+      <FilmContent/>
     </div>
   )
 }

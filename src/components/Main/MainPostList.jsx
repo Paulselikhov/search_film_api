@@ -1,9 +1,6 @@
-import React, { useMemo, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import {FETCH_SIMILARS_SUCCESS } from '../../store/reducers/searchReducer';
 import { getSimilars } from '../../store/action-creators/getSimilars';
 import MainPost from '../UI/MainPost/MainPost';
 import { GET_FILM_ID } from '../../store/reducers/searchReducer';
@@ -14,7 +11,7 @@ import './../../styles/Main.scss';
 const MainPostList = () => {
     
     const showSerials = useSelector ( state => state.searchReducer)
-    console.log(showSerials, 'Гавно')
+
     const dispatch = useDispatch()
     
     const navigate = useNavigate();
@@ -26,11 +23,6 @@ const MainPostList = () => {
         
     }
     
-    const [state, getState] = useState('Введите название фильма')
-    
-
-
-
     if (showSerials.loading){
         return <div className="main_Loading"><Loader/></div>
     }
