@@ -5,13 +5,11 @@
     background: url(./../img/background.png) 0 0/cover no-repeat;
     height: 100vh;
     font-size: 10px; // от этого размера текста наследуются все остальные на странице, а также на других страницах, если не задать им родительский
-    border: 1px solid rgb(255, 0, 0);
-
     
 }
 
 .main_Title{
-    padding-top: 10%;
+    padding-top: 5%;
     max-width: 60%;
     margin: 0px auto;
     margin-bottom: 6%;
