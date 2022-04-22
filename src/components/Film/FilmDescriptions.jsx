@@ -26,11 +26,11 @@ const FilmDescriptions = () => {
 
   return (
     <div className={classes.film}>
-      <div className={classes.title} style = { {background: `url(${item[index].coverUrl}) 200px 0/cover no-repeat`}}> {/* Тут будет изображение */}
-        <div className={classes.black}> {/* Тут будет тень  */}
-          <div className={classes.main} > {/* Блок с описанием */}
+      <div className={classes.main} style = { {background: `url(${item[index].coverUrl}) 200px 0/cover no-repeat`}}> 
+        <div className={classes.main_shadow}> {/* Тут будет тень  */}
+          <div className={classes.main_content} > {/* Блок с описанием */}
             <div>
-              <div className={classes.main_title}>{item[index].nameRu}</div>
+              <div className={classes.content_title}>{item[index].nameRu}</div>
               <div className={classes.main_children}>
                 <span>IMDb {item[index].ratingImdb}</span>
                 <span>Кинопоиск {item[index].ratingKinopoisk}</span>
@@ -53,7 +53,7 @@ const FilmDescriptions = () => {
       <div className={classes.description}>
         <p>Смотри {item[index].nameRu} на Richbee Shows</p>
         <p>{item[index].description}</p>
-        <div className={classes.similars}>
+        <div className={classes.description_similars}>
           <div className={classes.similars_title}>Также может понравиться</div>
           <div className={classes.similars__list}>
             {state.similars.map( (item, index) => 

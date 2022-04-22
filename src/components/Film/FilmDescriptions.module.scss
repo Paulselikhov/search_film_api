@@ -4,7 +4,7 @@
     overflow: visible;
 
 
-    .title{
+    .main{
         display: flex;
         flex-direction: column;
         color: white;
@@ -12,13 +12,13 @@
         
         
 
-        .black{
+        .main_shadow{
             background: linear-gradient(to left,rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.8), rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0));
             background-repeat: no-repeat;
             background-size: 1000px 100%;
             height: 100%; // Относительно .title
         }
-        .main{
+        .main_content{
             // У нас два контейнера
             display: flex;
             flex-direction: column;
@@ -27,7 +27,7 @@
             height: 100%; // Относительно .title
             text-shadow: 1px 1px 8px #000; // Тень для всех элементов в блоке с изображением
 
-            .main_title{
+            .content_title{
                 font-size: 6em;
                 margin-bottom: 3%;
                 
@@ -128,7 +128,7 @@
             }
         }
 
-        .similars{
+        .description_similars{
             font-weight: 400;
             line-height: 28px;
 
