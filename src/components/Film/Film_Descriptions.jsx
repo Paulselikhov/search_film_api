@@ -25,8 +25,7 @@ const Film_Descriptions = () => {
   }
 
   return (
-    <div>
-
+    <div className={classes.film}>
       <div className={classes.title} style = { {background: `url(${item[index].coverUrl}) 200px 0/cover no-repeat`}}> {/* Тут будет изображение */}
         <div className={classes.black}> {/* Тут будет тень  */}
           <div className={classes.main} > {/* Блок с описанием */}

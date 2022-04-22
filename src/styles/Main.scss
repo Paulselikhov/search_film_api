@@ -1,11 +1,9 @@
 .Main{
-    
     font-family: 'Montserrat', sans-serif;
     color: white;
     background: url(./../img/background.png) 0 0/cover no-repeat;
     height: 100vh;
     font-size: 10px; // от этого размера текста наследуются все остальные на странице, а также на других страницах, если не задать им родительский
-    
 }
 
 .main_Title{
@@ -30,7 +28,7 @@
 
 
 .main_Content{
-    height: 35%; // высота поста относитель main
+    height: 28%; // высота поста относитель main
     overflow: hidden;
     margin: 0px auto;
     width: 60%;
