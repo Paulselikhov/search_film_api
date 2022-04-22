@@ -8,97 +8,101 @@
         display: flex;
         flex-direction: column;
         color: white;
-        height: 94vh; // Высота изображения
+        height: 83vh; // Высота изображения
+        
+        
 
         .black{
             background: linear-gradient(to left,rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.8), rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0));
             background-repeat: no-repeat;
             background-size: 1000px 100%;
-            height: 100vh; // Высота тени
+            height: 100%; // Относительно .title
         }
         .main{
             // У нас два контейнера
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding: 100px 0px 0px 100px;
-        
+            padding: 8% 0px 0px 8%; // относительно .main
+            height: 100%; // Относительно .title
             text-shadow: 1px 1px 8px #000; // Тень для всех элементов в блоке с изображением
-            height: 85vh; //Высота относительно окна браузера
-        }
-        .main_title{
-            font-size: 6em;
-            margin-bottom: 0.3em;
-            
-        }
-        .main_children{ // Блок Рейтинг, тип, жанр, год
-        
-            display: flex;
-            flex-wrap: wrap;
-            span{
-                font-size: 2em;
-                font-weight: 600;
-                line-height: 29px;
+
+            .main_title{
+                font-size: 6em;
+                margin-bottom: 3%;
                 
-                &:first-child{ // Рейтинг IMDb
-                    padding: 0.5em 0.7em 0.5em;
-                    white-space: nowrap; // перенос строки
-                    margin-right: 15px;
-                    
-                    border-radius: 8px;
-                    background-color: yellow;
-        
-                    color: black;
-                    text-align: center;
-                    text-shadow: 2px 2px 2px rgb(255, 153, 0); 
-                    font-weight: 900;
-                    font-size: 1.1em;
-                    line-height: 15px;
-                }
-                &:nth-child(2){ // Рейтинг кинопоиск
-                    padding: 0.5em 0.7em 0.5em;
-                    white-space: nowrap; // перенос строки
-                    margin-right: 15px;
-        
-                    
-                    border-radius: 8px;
-                    background-color: yellow;
-        
-                    color: black;
-                    text-align: center;
-                    text-shadow: 2px 2px 2px rgb(255, 153, 0); 
-                    font-weight: 900;
-                    font-size: 1.1em;
-                    line-height: 15px;
-                }
-                &:nth-child(3){ // Жанр
-                    text-shadow: 1px 1px 8px #000;
-                }
-                &:nth-child(4){ // Тип
-                    text-shadow: 1px 1px 8px #000;
-                }
-                &:nth-child(5){ // Год
-                    text-shadow: 1px 1px 8px #000;
-                }
             }
+            .main_children{ // Блок Рейтинг, тип, жанр, год
             
+                display: flex;
+                flex-wrap: wrap;
+                span{
+                    font-size: 2em;
+                    font-weight: 600;
+                    line-height: 29px;
+                    
+                    &:first-child{ // Рейтинг IMDb
+                        padding: 0.5em 0.7em 0.5em;
+                        white-space: nowrap; // перенос строки
+                        margin-right: 15px;
+                        
+                        border-radius: 8px;
+                        background-color: yellow;
+            
+                        color: black;
+                        text-align: center;
+                        text-shadow: 2px 2px 2px rgb(255, 153, 0); 
+                        font-weight: 900;
+                        font-size: 1.1em;
+                        line-height: 15px;
+                    }
+                    &:nth-child(2){ // Рейтинг кинопоиск
+                        padding: 0.5em 0.7em 0.5em;
+                        white-space: nowrap; // перенос строки
+                        margin-right: 15px;
+            
+                        
+                        border-radius: 8px;
+                        background-color: yellow;
+            
+                        color: black;
+                        text-align: center;
+                        text-shadow: 2px 2px 2px rgb(255, 153, 0); 
+                        font-weight: 900;
+                        font-size: 1.1em;
+                        line-height: 15px;
+                    }
+                    &:nth-child(3){ // Жанр
+                        text-shadow: 1px 1px 8px #000;
+                    }
+                    &:nth-child(4){ // Тип
+                        text-shadow: 1px 1px 8px #000;
+                    }
+                    &:nth-child(5){ // Год
+                        text-shadow: 1px 1px 8px #000;
+                    }
+                }
+                
+            }
+            .main_watch{
+            
+                width: 7em;
+                padding: 10px 0px 10px 0px;
+                margin-bottom: 1em;
+            
+                border: 1px solid #ffffff;
+                border-radius: 20px;
+            
+                font-size: 2em;
+                text-align: center;
+            }
+            .main_awards{
+                font-size: 2em;
+                text-shadow: 2px 2px 3px #000;
+                padding-bottom: 3%;
+            }
         }
-        .main_watch{
-        
-            width: 7em;
-            padding: 10px 0px 10px 0px;
-            margin-bottom: 1em;
-        
-            border: 1px solid #ffffff;
-            border-radius: 20px;
-        
-            font-size: 2em;
-            text-align: center;
-        }
-        .main_awards{
-            font-size: 2em;
-            text-shadow: 2px 2px 3px #000;
-        }
+
         
     }
     

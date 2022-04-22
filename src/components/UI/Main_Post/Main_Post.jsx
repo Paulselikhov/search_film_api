@@ -17,7 +17,11 @@ const Main_Post = ({index, ...props}) => {
             
                 <div className={classes.title}>{/* Заголовок */}
                     <h1>{state.items[index].nameRu}</h1>
-                    <div className={classes.description}>{state.items[index].type} | {state.items[index].genres[0].genre} | {state.items[index].year}</div> {/* TVSeries | Drama | 2020 */}
+                    <div className={classes.description}>{state.items[index].type} | {
+                    (state.items[index].genres[0] === undefined)? /* Временное условие! */
+                    state.items[index].genres[0]
+                    : state.items[index].genres[0].genre
+                  } | {state.items[index].year}</div> {/* TVSeries | Drama | 2020 */}
                 </div> 
             
                 <div className={classes.rating}>IMDb {state.items[index].ratingImdb}</div> {/* Рейтинг */} 
