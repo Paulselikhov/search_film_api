@@ -8,7 +8,8 @@ export const GET_FILM_ID = "GET_FILM_ID";
 
 const defaultState = {
     film_id: null,
-    items: [{
+    items: null,
+    /* items: [{
         imbdId: 'id999', 
         nameRu:'Stangers things: part 1', 
         year: '1997', 
@@ -19,7 +20,7 @@ const defaultState = {
         slogan: 'Нет слогана',
         description: 'Нео не представлял во что он влип. Мир виртуальных технологий очень опасен и не щадит никого. Он взял пушку и пошел всех мочить, потом попал в другое измерение и там творил всякие ужасные вещи и еще носил темные очки и темное пальто и вообще круто выглядел...',
         posterUrl:'https://kinopoiskapiunofficial.tech/images/posters/kp/961694.jpg',
-    },],
+    },], */
     similars: [{
         imbdId: 'id000', 
         nameRu:'Similar', 

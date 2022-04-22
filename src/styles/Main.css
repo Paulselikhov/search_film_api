@@ -1,42 +1,47 @@
 .Main{
     font-family: 'Montserrat', sans-serif;
     color: white;
-    
-}
-
-.main_Background{
     background: url(/src/img/background.png) 0 0/cover no-repeat;
     height: 100vh;
-    
 }
+
 .main_Title{
     max-width: 728px;
     margin: 0px auto;
     padding-bottom: 40px;
      /* высота равна 100% дисплея */
-    
+}
+
+.main_Loading{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px; /* отступ от кнопки */
+}
+
+.main_Wait{
+    text-align: center;
+    margin-top: 20px; /* отступ от кнопки */
 }
 
 .main_Content{
-    display: block;
-    height: 180px;
+    height: 350px;
     overflow: hidden;
+    margin: 0px auto;
+    width: 60%;
+    margin-top: 20px; /* отступ от кнопки */
 }
-.main_Content_hidden{
-    display: none;
-    height: 180px;
-    overflow: hidden;
-}
+
 .main_Content::-webkit-scrollbar{
     width: 0;
 }
 .main_Content:hover{
-    background: rgb(22, 18, 18);
+    background: url(/src/img/gif_post.gif) 0 0/cover no-repeat;
     position: absolute;
     top: 15%;
     left: 15%;
     height: 70vh;
     width: 70vw;
+    padding: 2em;
 
     border-radius: 60px;
     box-shadow: 0px 0px 20px rgb(109, 96, 96);

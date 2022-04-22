@@ -42,6 +42,7 @@ export const fetchSerials = (inputValue) => {
                     
                 }
                 dispatch({type: FETCH_SERIALS_SUCCESS, payload: response.data.items})
+
             } else {
                 dispatch({type: FETCH_SERIALS_ERROR, payload: `Произошла ошибка на стороне сервера: ${response.data.statusText}  `})
             }

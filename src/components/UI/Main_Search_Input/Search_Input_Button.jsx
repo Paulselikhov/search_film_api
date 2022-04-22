@@ -12,8 +12,8 @@ const Search_Input_Button = () => {
 
     const dispatch = useDispatch()
   
-    function getDispatch(){
-      dispatch(fetchSerials(showInput.inputValue))
+    async function getDispatch(e){
+      dispatch(fetchSerials(showInput.inputValue, e))
     }
   return (
     <div className={classes.search}>
@@ -21,8 +21,10 @@ const Search_Input_Button = () => {
         />
         <SearchButton onClick={ (e) => {
           console.log(e)
-          e.target.parentElement.parentElement.nextElementSibling.className='main_Content'
-          getDispatch()}}/>
+          getDispatch(e)
+          
+          
+          }}/>
             
     </div>
   )
