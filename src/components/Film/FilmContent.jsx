@@ -23,6 +23,8 @@ const FilmContent = () => {
     console.log('ChangeToSimilar working...')
   }
 
+  console.log(item[0])
+
   return (
     <div className={classes.film}>
       <div className={classes.film_main} style = { {background: `url(${item[index].coverUrl}) 200px 0/cover no-repeat`}}> 
@@ -41,7 +43,7 @@ const FilmContent = () => {
 
             <div>
               <div className={classes.main_watch}>
-                <a target="_blank" href={item[index].trailer}>Watch</a>
+                <a target="_blank" href={item[index].webUrl}>Watch</a>
               </div>
               <div className={classes.main_slogan}>{item[index].slogan}</div>
             </div>

@@ -86,20 +86,30 @@
             }
             .main_watch{
             
-                width: 7em;
+                width: 5em;
                 padding: 10px 0px 10px 0px;
                 margin-bottom: 1em;
             
                 border: 1px solid #ffffff;
                 border-radius: 20px;
-            
+
                 font-size: 2em;
+                letter-spacing: 3px;
                 text-align: center;
+                a{
+                    color: white;
+                }
+                &:active{
+                    padding: 10px 5px 9px 5px;
+                    font-size: 1.6em;
+                }
+                
             }
             .main_slogan{
                 font-size: 2em;
                 text-shadow: 2px 2px 3px #000;
                 padding-bottom: 3%;
+ 
             }
         }
 
