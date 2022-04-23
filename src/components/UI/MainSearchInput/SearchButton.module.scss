@@ -10,5 +10,8 @@
     line-height: 22px;
     p{
         padding: 15px 10px 15px 10px;
+        &:hover{
+            text-shadow: 0px 0px 20px rgb(0, 0, 0);
+        }
     }
 }

@@ -24,7 +24,10 @@ const MainPost = ({index, ...props}) => {
                   } | {state.items[index].year}</div> {/* TVSeries | Drama | 2020 */}
                 </div> 
             
-                <div className={classes.post_rating}>IMDb {state.items[index].ratingImdb}</div> {/* Рейтинг */} 
+                <div>
+                  <div className={classes.post_ratingImdb}>IMDb {state.items[index].ratingImdb}</div> {/* Рейтинг */}
+                  <div className={classes.post_ratingKin}>Кинопоиск {state.items[index].ratingKinopoisk}</div> {/* Рейтинг */}
+                </div> 
           </div> 
           <div className={classes.slogan}>{state.items[index].slogan}</div> {/* Rating */}
         </div>

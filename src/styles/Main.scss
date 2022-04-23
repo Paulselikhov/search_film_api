@@ -35,11 +35,11 @@
         &:hover{
             background: url(./../img/gif_post.gif) 0 0/cover no-repeat;
             position: absolute;
-            top: 15%;
+            top: 60%;
             left: 15%;
-            height: 70vh;
+            height: 30%;
             width: 70vw;
-            padding: 2em;
+            padding: 1em 2em;
         
             border-radius: 60px;
             box-shadow: 0px 0px 20px rgb(109, 96, 96);
@@ -50,6 +50,7 @@
                 display: block;
                 height: 50%;
                 margin: 2%; // отступ от hover-a
+            
             }
             .main_Content_post{
                 display: none;
