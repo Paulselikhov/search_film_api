@@ -51,25 +51,24 @@
             
                         color: black;
                         text-align: center;
-                        text-shadow: 2px 2px 2px rgb(255, 153, 0); 
+                        text-shadow: none;
                         font-weight: 900;
-                        font-size: 1.1em;
+                        font-size: 1.6em;
                         line-height: 15px;
                     }
                     &:nth-child(2){ // Рейтинг кинопоиск
                         padding: 0.5em 0.7em 0.5em;
                         white-space: nowrap; // перенос строки
                         margin-right: 15px;
-            
-                        
+
+                        text-shadow: none;
                         border-radius: 8px;
                         background-color: yellow;
-            
+                        
                         color: black;
                         text-align: center;
-                        text-shadow: 2px 2px 2px rgb(255, 153, 0); 
                         font-weight: 900;
-                        font-size: 1.1em;
+                        font-size: 1.6em;
                         line-height: 15px;
                     }
                     &:nth-child(3){ // Жанр
@@ -93,7 +92,7 @@
                 border: 1px solid #ffffff;
                 border-radius: 20px;
 
-                font-size: 2em;
+                font-size: 3em;
                 letter-spacing: 3px;
                 text-align: center;
                 a{
@@ -101,7 +100,15 @@
                 }
                 &:active{
                     padding: 10px 5px 9px 5px;
-                    font-size: 1.6em;
+                    box-shadow: 0px 0px 8px 2px rgb(119, 0, 255);
+                    font-size: 2.9em;
+                        &:hover{
+                            box-shadow: 0px 0px 8px 2px rgb(119, 0, 255);
+                        }
+                    
+                }
+                &:hover{
+                    box-shadow: 0px 0px 8px 2px rgb(204, 204, 191);
                 }
                 
             }
