@@ -19,7 +19,7 @@ const MainPostList = () => {
     function goToFilm(item, index){
         dispatch(getSimilars(item))
         dispatch({type: GET_FILM_ID, payload: index})
-        navigate('/film')
+        navigate("Film")
         
     }
     
