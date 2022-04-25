@@ -17,7 +17,7 @@ function App() {
     <BrowserRouter> 
       <Routes>
         <Route path="search_film_api/" element={<Main/>} />
-        <Route path="search_film_api/film" element={<Film/>} />
+        <Route path="search_film_api/Film" element={<Film/>} />
         <Route path="search_film_api/*" element={<NotFound/>} />
       </Routes>
     </BrowserRouter>
