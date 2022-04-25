@@ -16,9 +16,9 @@ function App() {
   return (
     <BrowserRouter> 
       <Routes>
-        <Route path="" element={<Main/>} />
-        <Route path="/film" element={<Film/>} />
-        <Route path="*" element={<NotFound/>} />
+        <Route path="search_film_api/" element={<Main/>} />
+        <Route path="search_film_api/film" element={<Film/>} />
+        <Route path="search_film_api/*" element={<NotFound/>} />
       </Routes>
     </BrowserRouter>
   );
