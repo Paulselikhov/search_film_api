@@ -43,7 +43,7 @@ const FilmContent = () => {
 
             <div>
               <div className={classes.main_watch}>
-                <a target="_blank" href={item[index].webUrl}>Watch</a>
+                <a target="_blank" href={item[index].webUrl}>Смотреть</a>
               </div>
               <div className={classes.main_slogan}>{item[index].slogan}</div>
             </div>
