@@ -2,17 +2,11 @@ import axios from "axios";
 import { FETCH_SERIALS, FETCH_SERIALS_ERROR, FETCH_SERIALS_SUCCESS } from "../reducers/searchReducer";
 
 
-
-
-/* 4fdefa42-48de-42c9-850e-7d2efd595fca */
-
-
 export const fetchSerials = (inputValue) => {
 
     const keyword=inputValue;
     const key = 'dec3cfb4-ee86-4b1b-b0a3-a2d612a08a90';
 
-    console.log('dispatching...')
     return async(dispatch) => {
         try {
             dispatch({type: FETCH_SERIALS})
@@ -23,6 +17,7 @@ export const fetchSerials = (inputValue) => {
                 'Content-Type': 'application/json',
                     },
                 })
+                console.log(response)
             if (response.status == 200) {
 
                 for (let i = 0; i <= response.data.items.length-1; i++ ){
