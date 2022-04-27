@@ -9,11 +9,13 @@ const Main = () => {
     
     return (
       <div className="Main">
+        <div>
           <div className="main_Title">
             <MainTitle/>
           </div>
             <SearchInputButton/> 
             <MainPostList/>
+        </div>     
       </div>
     );
   }

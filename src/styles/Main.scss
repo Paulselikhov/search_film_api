@@ -1,77 +1,79 @@
 .Main{
     font-family: 'Montserrat', sans-serif;
     color: white; // не наследуется на другие страницы
-    background: url(./../img/background.png) 0 0/cover no-repeat; // не наследуется на другие страницы
+    background: url(./../img/background-tor.jpg); // не наследуется на другие страницы
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100vh; // не наследуется на другие страницы
     font-size: 10px; // не наследуется на другие страницы
-
-    .main_Title{
-        padding-top: 5%;
-        max-width: 60%;
-        margin: 0px auto;
-        margin-bottom: 6%;
-    }
-
-    .main_Content{
-
-        height: 28%; // высота поста относитель main
-        overflow: hidden;
-        margin: 0px auto;
-        width: 60%;
-        margin-top: 4%; /* отступ от кнопки */
-        
-        .main_Content_post{
-            height: 98%;
-        }
-        
-        &::-webkit-scrollbar{
-            width: 0;
+    &>div{
+        width: 70%;
+        //border: 1px solid rgb(255, 255, 255);
+        .main_Title{
+            padding-top: 5%;
+            margin-bottom: 6%;
+            margin: 0px auto;
         }
     
-        .main_Content_list{
-            display: none;
-        }
-    
-        &:hover{
-            background: url(./../img/gif_post.gif) 0 0/cover no-repeat;
-            position: absolute;
-            top: 60%;
-            left: 15%;
-            height: 30%;
-            width: 70vw;
-            padding: 1em 2em;
-        
-            border-radius: 60px;
-            box-shadow: 0px 0px 20px rgb(109, 96, 96);
-        
-            overflow-y: scroll;
+        .main_Content{
+            height: 28%; // высота поста относитель main
+            overflow: hidden;
+            width: 90%;
+            margin: 0px auto;
+            .main_Content_post{
+                height: 98%;
+            }
+            
+            &::-webkit-scrollbar{
+                width: 0;
+            }
         
             .main_Content_list{
-                display: block;
-                height: 50%;
-                margin: 2%; // отступ от hover-a
-            
-            }
-            .main_Content_post{
                 display: none;
-                
             }
-        }
-    
-    }
-    
-    .main_Loading{
-        display: flex;
-        justify-content: center;
-        margin-top: 100px; /* отступ от кнопки */
         
+            &:hover{
+                background: url(./../img/gif_post.gif) 0 0/cover no-repeat;
+                position: absolute;
+                top: 2%;
+                left: 2%;
+                height: 90%;
+                width: 70vw;
+                padding: 1em 2em;
+            
+                border-radius: 60px;
+                box-shadow: 0px 0px 20px rgb(109, 96, 96);
+            
+                overflow-y: scroll;
+            
+                .main_Content_list{
+                    display: block;
+                    height: 50%;
+                    margin: 2%; // отступ от hover-a
+                
+                }
+                .main_Content_post{
+                    display: none;
+                    
+                }
+            }
+        
+        }
+        
+        .main_Loading{
+            display: flex;
+            justify-content: center;
+            margin-top: 100px; /* отступ от кнопки */
+            
+        }
+        
+        .main_Wait{
+            text-align: center;
+            margin-top: 20px; /* отступ от кнопки */
+            font-size: 2em;
+        }
+
     }
-    
-    .main_Wait{
-        text-align: center;
-        margin-top: 20px; /* отступ от кнопки */
-        font-size: 2em;
-    }
-    
 }
 
