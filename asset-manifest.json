@@ -1,15 +1,14 @@
 {
   "files": {
-    "main.css": "/search_film_api/static/css/main.cd3f3e6b.css",
-    "main.js": "/search_film_api/static/js/main.566168a0.js",
-    "static/media/gif_post.gif": "/search_film_api/static/media/gif_post.0321c0c17c75647d8e93.gif",
+    "main.css": "/search_film_api/static/css/main.0e9ab67e.css",
+    "main.js": "/search_film_api/static/js/main.56c0180a.js",
     "static/media/background-tor.jpg": "/search_film_api/static/media/background-tor.e4d33915067c58683793.jpg",
     "index.html": "/search_film_api/index.html",
-    "main.cd3f3e6b.css.map": "/search_film_api/static/css/main.cd3f3e6b.css.map",
-    "main.566168a0.js.map": "/search_film_api/static/js/main.566168a0.js.map"
+    "main.0e9ab67e.css.map": "/search_film_api/static/css/main.0e9ab67e.css.map",
+    "main.56c0180a.js.map": "/search_film_api/static/js/main.56c0180a.js.map"
   },
   "entrypoints": [
-    "static/css/main.cd3f3e6b.css",
-    "static/js/main.566168a0.js"
+    "static/css/main.0e9ab67e.css",
+    "static/js/main.56c0180a.js"
   ]
 }
