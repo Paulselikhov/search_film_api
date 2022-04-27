@@ -29,7 +29,7 @@ const MainPost = ({index, ...props}) => {
                   <div className={classes.post_ratingKin}>Кинопоиск {state.items[index].ratingKinopoisk}</div> {/* Рейтинг */}
                 </div> 
           </div> 
-          <div className={classes.slogan}>{state.items[index].slogan}</div> {/* Rating */}
+          <div className={classes.slogan}>{state.items[index].shortDescription}</div> {/* Rating */}
         </div>
         
         

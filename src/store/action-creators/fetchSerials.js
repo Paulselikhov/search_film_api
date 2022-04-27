@@ -38,6 +38,7 @@ export const fetchSerials = (inputValue) => {
                     response.data.items[i].key = i
                     response.data.items[i].slogan = response_id.data.slogan
                     response.data.items[i].description = response_id.data.description
+                    response.data.items[i].shortDescription = response_id.data.shortDescription
                     response.data.items[i].coverUrl = response_id.data.coverUrl
                     response.data.items[i].webUrl = response_id.data.webUrl
                     
