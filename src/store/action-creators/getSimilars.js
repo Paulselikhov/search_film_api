@@ -29,6 +29,11 @@ export const getSimilars = (item) => {
             })
             
             sim[i] = response_similar_id.data
+
+            if (sim[i].coverUrl == null) {
+                sim[i].coverUrl = "https://alterlit.ru/media/post_images/b8b056b9b26b4f6c8dcd08963c9e5f9a.jpg"
+            }
+
             sim[i].key = [i]
         }
         
