@@ -50,16 +50,15 @@ const FilmContent = () => {
           </div>
         </div>
       </div>
-      
       <div className={classes.film_description}>
         <p>Смотри {item[index].nameRu} на Richbee Shows</p>
-        <p>{item[index].description}</p>
+        {(item[index].description == null)? <div className={classes.notfound}> К сожалению описание не найдено :(</div>
+        :<p>{item[index].description}</p>}
         <div className={classes.description_similars}>
           <div className={classes.similars_title}>Также может понравиться</div>
           <div className={classes.similars__list}>
-
             { (state.similars == null)? 
-              <div> Похожих фильмов не найдено</div>
+              <div className={classes.notfound}>К сожалению похожих фильмов не найдено :(</div>
               : state.similars.map( (item, index) => 
               <FilmSimilar onClick={ (e) => 
                 changeToSimilar(item.key, item)} index={index} key={index}/>
