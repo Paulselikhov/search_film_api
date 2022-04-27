@@ -42,10 +42,20 @@ export const fetchSerials = (inputValue) => {
 
                     response.items[i].key = i
                     response.items[i].slogan = response_id.data.slogan
-                    response.items[i].description = response_id.data.description
-                    response.items[i].shortDescription = response_id.data.shortDescription
                     response.items[i].webUrl = response_id.data.webUrl
 
+                    if ( response_id.data.shortDescription == null){
+                        response.items[i].shortDescription = "Нет описания"
+                    } else {
+                        response.items[i].shortDescription = response_id.data.shortDescription
+                    }
+
+                    if ( response_id.data.description == null){
+                        response.items[i].description = "Описание фильма не найдено :c"
+                    } else {
+                        response.items[i].description = response_id.data.description
+                    }
+                    
                     if ( response_id.data.coverUrl == null) {
                         response.items[i].coverUrl = "https://alterlit.ru/media/post_images/b8b056b9b26b4f6c8dcd08963c9e5f9a.jpg"
                     } else {

@@ -52,8 +52,7 @@ const FilmContent = () => {
       </div>
       <div className={classes.film_description}>
         <p>Смотри {item[index].nameRu} на Richbee Shows</p>
-        {(item[index].description == null)? <div className={classes.notfound}> К сожалению описание не найдено :(</div>
-        :<p>{item[index].description}</p>}
+        <p>{item[index].description}</p>
         <div className={classes.description_similars}>
           <div className={classes.similars_title}>Также может понравиться</div>
           <div className={classes.similars__list}>
