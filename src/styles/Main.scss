@@ -8,8 +8,7 @@
     height: 100vh; // не наследуется на другие страницы
     font-size: 10px; // не наследуется на другие страницы
     &>div{
-        width: 70%;
-        //border: 1px solid rgb(255, 255, 255);
+        width: 65%;
         .main_Title{
             padding-top: 5%;
             margin-bottom: 6%;
