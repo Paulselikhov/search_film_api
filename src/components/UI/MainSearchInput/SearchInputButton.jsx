@@ -10,14 +10,13 @@ const SearchInputButton = () => {
 
   //как я понимаю ты сохраняешь значение инпута в редакс, чтобы использовать его в этой же компоненте
   //тогда лучше использовать useState внутри компоненты
-  //как-то так
+ 
   const [value, setValue] = useState("");
   const dispatch = useDispatch();
 
-  async function getDispatch(e) {
-    //зачем здесь async??
+  function getDispatch(e) {
     //dispatch(fetchSerials(showInput.inputValue, e));
-    dispatch(fetchSerials(value, e)); //зачем в функцию fetchSerials ты кидаешь второй аргумент, если она принимает всего один
+    dispatch(fetchSerials(e));
   }
   const changeInput = (e) => {
     setValue(e.target.value);
