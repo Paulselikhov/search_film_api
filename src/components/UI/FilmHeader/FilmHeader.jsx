@@ -9,11 +9,13 @@ const FilmHeader = () => {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
   function goToMain(){
     dispatch({type: FETCH_SERIALS_SUCCESS, payload: null})
     dispatch({type: FETCH_SIMILARS_SUCCESS, payload: null})
     navigate("../search_film_api/")
   }
+  
   return (
     <div onClick={goToMain} className={classes.header}>
             <div className={classes.text}>Richbee Shows</div>

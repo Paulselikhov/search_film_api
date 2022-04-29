@@ -2,7 +2,7 @@
 .film{
     font-size: 10px;
     overflow: visible;
-
+    font-family: 'Montserrat', sans-serif;
 
     .film_main{
         display: flex;
@@ -85,8 +85,8 @@
             }
             .main_watch{
             
-                width: 5em;
-                padding: 10px 0px 10px 0px;
+                width: 6em;
+                padding: 10px 0;
                 margin-bottom: 1em;
             
                 border: 1px solid #ffffff;

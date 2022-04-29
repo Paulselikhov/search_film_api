@@ -1,12 +1,12 @@
 .Main{
     font-family: 'Montserrat', sans-serif;
-    color: white; // не наследуется на другие страницы
-    background: url(./../img/background-tor.jpg); // не наследуется на другие страницы
+    color: white; 
+    background: url(./../img/background-tor.jpg); 
     background-position: 0% 0%;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh; // не наследуется на другие страницы
-    font-size: 10px; // не наследуется на другие страницы
+    height: 100vh;
+    font-size: 10px;
     &>div{
         width: 65%;
         .main_Title{

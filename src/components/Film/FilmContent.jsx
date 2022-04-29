@@ -10,8 +10,6 @@ import classes from './FilmContent.module.scss';
 const FilmContent = () => {
 
   const dispatch = useDispatch()
-
-
   const state = useSelector ( state => state.searchReducer)
   const index = state.film_id;
   const item = state.items
@@ -22,8 +20,6 @@ const FilmContent = () => {
     dispatch({type: FETCH_SERIALS_SUCCESS, payload: state.similars})
     console.log('ChangeToSimilar working...')
   }
-
-  console.log(item[0])
 
   return (
     <div className={classes.film}>
