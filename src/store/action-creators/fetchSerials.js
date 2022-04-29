@@ -18,7 +18,6 @@ export const fetchSerials = (inputValue) => {
                     },
                 })
 
-
             if (response_result.status == 200) {
                 const response = {
                         items: [],
