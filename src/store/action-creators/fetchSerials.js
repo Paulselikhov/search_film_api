@@ -10,7 +10,7 @@ export const fetchSerials = (inputValue) => {
     return async(dispatch) => {
         try {
             dispatch({type: FETCH_SERIALS})
-            const response_result = await axios.get(`https://kinopoiskapiunofficial.tech/api/v2.2/films/?keyword=${keyword}&yearFrom=1990`,{
+            const response_result = await axios.get(`https://kinopoiskapiunofficial.tech/api/v2.2/films?keyword=${keyword}&yearFrom=1990`,{
                     method: 'GET',
                     headers: {
                 'X-API-KEY': key,
