@@ -14,9 +14,9 @@ const SearchInputButton = () => {
   const [value, setValue] = useState("");
   const dispatch = useDispatch();
 
-  function getDispatch(e) {
+  function getDispatch() {
     //dispatch(fetchSerials(showInput.inputValue, e));
-    dispatch(fetchSerials(e));
+    dispatch(fetchSerials(value));
   }
   const changeInput = (e) => {
     setValue(e.target.value);
